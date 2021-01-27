@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from "components/DeleteButton";
 
 function Transaction({ transactionObj }) {
   const type = transactionObj.type;
@@ -12,7 +13,7 @@ function Transaction({ transactionObj }) {
 
   return (
     <div className={colorByType}>
-      <button className="deleteBtn">X</button>
+      <DeleteButton transactionId={transactionObj.id} />
       {transactionObj.date}
       {transactionObj.text}
       {transactionObj.amount}

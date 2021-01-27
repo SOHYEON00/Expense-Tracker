@@ -7,7 +7,7 @@ function useForm({ initialValues, onSubmit}) {
     const [isSubmit, setIsSubmit] = useState(false);
 
     const addObjFirebase = async(obj) => {
-        await dbService.collection(TRANSACTIONS).add(obj);
+        await dbService.collection(TRANSACTIONS).doc(`${obj.id}`).set(obj);
     };
 
     const changeHandler = (event) => {
