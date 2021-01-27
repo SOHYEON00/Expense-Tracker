@@ -4,9 +4,8 @@ import Transaction from "components/Transaction";
 function History({ transactions }) {
 
     const copyTransactions = transactions.concat();
-    copyTransactions.sort((a,b) => {return (a.date > b.date) ? 1 : -1})
-    console.log(transactions);
-    console.log(copyTransactions);
+    copyTransactions.sort((a,b) => {return (a.date > b.date) ? -1 : 1})
+
     return (
       <article>
         <h3>History</h3>

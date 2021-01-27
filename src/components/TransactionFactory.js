@@ -8,6 +8,14 @@ function TransactionFactory() {
     onSubmit: (values) => {}
     });
 
+  let isExpense = true;
+
+  if(values.type === '지출'){
+    isExpense = true;
+  } else if(values.type === '수입'){
+    isExpense = false;
+  }
+
   return (
     <form onSubmit={submitHandler}>
       <fieldset id="type">
@@ -19,6 +27,7 @@ function TransactionFactory() {
           id="typePlus"
           className="transactionType"
           value="수입"
+          checked={!isExpense}
           onChange={changeHandler}
         />
         <label htmlFor="typeMinus">지출</label>
@@ -27,8 +36,8 @@ function TransactionFactory() {
           name="type"
           id="typeMinus"
           className="transactionType"
-          value="지출"
-          checked
+          value="지출" 
+          checked={isExpense}
           onChange={changeHandler}
         />
         

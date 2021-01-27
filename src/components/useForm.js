@@ -6,10 +6,14 @@ function useForm({ initialValues, onSubmit}) {
     // const [errors, setErrors] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
 
+    const addObjFirebase = async(obj) => {
+        await dbService.collection(TRANSACTIONS).add(obj);
+    };
+
     const changeHandler = (event) => {
         const {name, value} = event.target;
-        setIsSubmit(false);
         setValues({ ...values, [name]: value});
+        setIsSubmit(false);
     };
 
     const submitHandler = (event) => {
@@ -24,11 +28,8 @@ function useForm({ initialValues, onSubmit}) {
           amount: values.amount,
       };
       addObjFirebase(transactionObj);
+      setValues(initialValues);
     };
-
-    const addObjFirebase = async(obj) => {
-        await dbService.collection(TRANSACTIONS).add(obj);
-    }
 
     useEffect(() => {
         if(isSubmit) {
