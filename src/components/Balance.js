@@ -3,12 +3,12 @@ import React from "react";
 function Balance({ transactions }) {
   const copyTransactions = transactions.concat();
 
-  const total = copyTransactions
-                    .map((e) => {
-                        if(e.type === '수입') { return +e.amount}
-                        else if(e.type === '지출') { return -e.amount}
-                    }) // return amount with +/- set by type
-                    .reduce((acc, cur) => (acc += cur), 0); //get total 
+//   const total = copyTransactions
+//                     .map((e) => {
+//                         if(e.type === '수입') { return +e.amount}
+//                         else if(e.type === '지출') { return -e.amount}
+//                     }) // return amount with +/- set by type
+//                     .reduce((acc, cur) => (acc += cur), 0); //get total 
 
   const income = copyTransactions
                     .filter((e) => e.type === "수입") //filter by type
@@ -19,6 +19,8 @@ function Balance({ transactions }) {
                     .filter((e) => e.type === "지출") 
                     .map(e => parseInt(e.amount))
                     .reduce((acc, cur) => (acc += cur), 0);
+
+  const total = income - expense;
 
   return (
     <article>
