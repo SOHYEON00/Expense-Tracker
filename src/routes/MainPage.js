@@ -19,7 +19,7 @@ function MainPage() {
 
     return (
       <>
-        <Balance />
+        <Balance transactions={transactions}/>
         <History transactions={transactions}/>
         <article>
           <h3>Add New Transaction</h3>

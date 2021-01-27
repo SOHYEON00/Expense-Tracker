@@ -6,7 +6,6 @@ function DeleteButton({ transactionId }) {
         const yes = window.confirm("내역을 삭제하시겠습니까?");
 
         if(yes){
-            console.log(transactionId);
             await dbService.doc(`${TRANSACTIONS}/${transactionId}`).delete();
         }
     }
