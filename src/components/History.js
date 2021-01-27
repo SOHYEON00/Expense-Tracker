@@ -3,11 +3,15 @@ import Transaction from "components/Transaction";
 
 function History({ transactions }) {
 
+    const copyTransactions = transactions.concat();
+    copyTransactions.sort((a,b) => {return (a.date > b.date) ? 1 : -1})
+    console.log(transactions);
+    console.log(copyTransactions);
     return (
       <article>
         <h3>History</h3>
         <section id="historyList" className="list">
-            {transactions && transactions.map((transaction) => {
+            {copyTransactions && copyTransactions.map((transaction) => {
                 return (
                     <Transaction
                         key={transaction.id}
