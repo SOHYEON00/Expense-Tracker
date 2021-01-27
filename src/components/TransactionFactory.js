@@ -4,7 +4,7 @@ import useForm from 'components/useForm';
 function TransactionFactory() {
 
   const { values, isSubmit, changeHandler, submitHandler} = useForm({
-    initialValues: {type: "", date: "", text: "", amount: 0},
+    initialValues: {type: "지출", date: "", text: "", amount: 0},
     onSubmit: (values) => {}
     });
 
@@ -28,6 +28,7 @@ function TransactionFactory() {
           id="typeMinus"
           className="transactionType"
           value="지출"
+          checked
           onChange={changeHandler}
         />
         
