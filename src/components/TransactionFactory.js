@@ -1,11 +1,13 @@
 import React from 'react';
 import useForm from 'components/useForm';
+import validate from 'components/validate';
 
 function TransactionFactory() {
 
-  const { values, isSubmit, changeHandler, submitHandler} = useForm({
+  const { values, errors, isSubmit, changeHandler, submitHandler} = useForm({
     initialValues: {type: "지출", date: "", text: "", amount: 0},
-    onSubmit: (values) => {}
+    onSubmit: (values) => {},
+    validate,
     });
 
   let isExpense = true;
@@ -47,7 +49,8 @@ function TransactionFactory() {
         <legend>Transaction Info</legend>
 
         <label htmlFor="date">Date</label>
-        <input type="date" name="date" value={values.date} onChange={changeHandler}/>
+        {errors.date && <span>{errors.date}</span>}
+        <input type="date" name="date" value={values.date} onChange={changeHandler} required/>
         <label htmlFor="text">Text</label>
         <input
           type="text"
@@ -56,16 +59,20 @@ function TransactionFactory() {
           name="text"
           id="text"
           placeholder="Enter text"
+          required
         />
         <label htmlFor="amount">Amount</label>
+        {errors.amount && <span>{errors.amount}</span>}
         <input
           type="number"
           id="amount"
           name="amount"
           value={values.amount}
           onChange={changeHandler}
+          required
         />
       </fieldset>
+      
       <input type="submit" value="Add transaction" disabled={isSubmit}/>
     </form>
   );
