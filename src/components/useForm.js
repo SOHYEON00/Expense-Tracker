@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
 import {dbService, TRANSACTIONS} from 'fBase';
 
-function useForm({ initialValues, onSubmit}) {
+function useForm({ initialValues, onSubmit, validate}) {
     const [values, setValues] = useState(initialValues);
-    // const [errors, setErrors] = useState("");
+    const [errors, setErrors] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
 
     const addObjFirebase = async(obj) => {
@@ -14,11 +14,13 @@ function useForm({ initialValues, onSubmit}) {
         const {name, value} = event.target;
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
+        setErrors(validate(values));
     };
 
     const submitHandler = (event) => {
         event.preventDefault();
         setIsSubmit(true);
+        setErrors(validate(values));
         
       const transactionObj = {
           type: values.type,
@@ -40,9 +42,11 @@ function useForm({ initialValues, onSubmit}) {
 
     return {
         values,
+        errors,
         isSubmit,
         changeHandler,
-        submitHandler
+        submitHandler,
+    
     }
 }
 
