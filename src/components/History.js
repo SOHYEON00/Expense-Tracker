@@ -4,12 +4,11 @@ import Transaction from "components/Transaction";
 function History({ transactions }) {
 
     const copyTransactions = transactions.concat();
-    
-    const line = "---------------";
-    copyTransactions.sort((a, b) => {
+
+    copyTransactions.sort((a, b) => { //sorting by date (desc)
       return a.date > b.date ? -1 : 1;
     });
-    console.log(copyTransactions);
+
     return (
       <article>
         <h3>History</h3>
@@ -18,14 +17,9 @@ function History({ transactions }) {
                 let isLine = false;
                 if(idx < copyTransactions.length-1){
                   if (transaction.date !== copyTransactions[idx + 1].date) {
-                    console.log(transaction.date);
-                    console.log(copyTransactions[idx + 1]);
                     isLine = true;
                   }
-                } else {
-                    isLine = false;
                 }
-               
                 return (
                     <Transaction
                         key={transaction.id}

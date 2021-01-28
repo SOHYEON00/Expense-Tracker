@@ -17,11 +17,17 @@ function MainPage() {
       });
     }, [])
 
+    const showContainer = () => {
+      const container = document.getElementById('newTransactionContainer');
+      container.classList.toggle('show');
+    }
+
     return (
       <>
-        <Balance transactions={transactions}/>
-        <History transactions={transactions}/>
-        <article>
+        <Balance transactions={transactions} />
+        <History transactions={transactions} />
+        <button className="button" onClick={showContainer}>Add new transaction</button>
+        <article id="newTransactionContainer" className=''>
           <h3>Add New Transaction</h3>
           <TransactionFactory />
         </article>

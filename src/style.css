@@ -5,3 +5,13 @@
 .moneyMinus {
     color: tomato;
 }
+
+#newTransactionContainer {
+    position: absolute;
+    bottom: -50%;
+    transition: transform 1s ease;
+}
+
+#newTransactionContainer.show {
+    transform: translateY(-100%);
+}
