@@ -4,20 +4,20 @@ import Settings from "routes/Settings";
 import MainPage from "routes/MainPage";
 import Nav from './Nav';
 
-function AppRouter() {
-    return (
-      <Router>
-        <Nav />
-        <Switch>
-          <Route exact path="/settings">
-              <Settings />
-          </Route>
-          <Route exact path="/">
-              <MainPage/>
-          </Route>
-        </Switch>
-      </Router>
-    );
+function AppRouter({ categories }) {
+  return (
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/settings" >
+          <Settings categories={categories}/>
+        </Route>
+        <Route exact path="/" >
+          <MainPage categories={categories}/>
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default AppRouter

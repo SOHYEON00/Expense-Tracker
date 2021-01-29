@@ -1,22 +1,18 @@
 import React from 'react';
 import useForm from 'components/useForm';
 import validate from 'components/validate';
+import RadioComponent from './RadioComponent';
+import {TRANSACTIONS} from "fBase";
 
 function TransactionFactory() {
 
   const { values, errors, isSubmit, changeHandler, submitHandler} = useForm({
-    initialValues: {type: "지출", date: "", text: "", amount: 0},
+    initialValues: {formType: TRANSACTIONS, type: "지출", date: "", text: "", amount: 0},
     onSubmit: (values) => {},
     validate,
     });
 
-  let isExpense = true;
-
-  if(values.type === '지출'){
-    isExpense = true;
-  } else if(values.type === '수입'){
-    isExpense = false;
-  }
+  
 
   return (
     <>
@@ -24,26 +20,7 @@ function TransactionFactory() {
     <form onSubmit={submitHandler}>
       <fieldset id="type">
         <legend>Transaction type</legend>
-        <label htmlFor="typePlus">수입</label>
-        <input
-          type="radio"
-          name="type"
-          id="typePlus"
-          className="transactionType"
-          value="수입"
-          checked={!isExpense}
-          onChange={changeHandler}
-        />
-        <label htmlFor="typeMinus">지출</label>
-        <input
-          type="radio"
-          name="type"
-          id="typeMinus"
-          className="transactionType"
-          value="지출" 
-          checked={isExpense}
-          onChange={changeHandler}
-        />
+        <RadioComponent values={values} changeHandler={changeHandler} />
         
       </fieldset>
 

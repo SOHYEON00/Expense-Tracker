@@ -1,10 +1,11 @@
+import Categories from 'components/Categories'
 import React from 'react'
 
-function Settings() {
+function Settings({categories}) {
     return (
         <>
          <article>
-             <h3>카테고리 설정</h3>
+             <Categories categories={categories}/>
         </article>   
         </>
     )

@@ -14,5 +14,6 @@ const firebaseConfig = {
   export default firebase.initializeApp(firebaseConfig);
 
   export const TRANSACTIONS = "transactions";
+  export const CATEGORIES = "categories";
 
   export const dbService = firebase.firestore();
