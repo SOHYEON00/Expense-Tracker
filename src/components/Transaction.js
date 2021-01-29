@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteButton from "components/DeleteButton";
+import { TRANSACTIONS } from "fBase";
 
 function Transaction({ transactionObj, isLine }) {
   const type = transactionObj.type;
@@ -17,7 +18,7 @@ function Transaction({ transactionObj, isLine }) {
     
     <div className={colorByType}>
       
-      <DeleteButton transactionId={transactionObj.id} />
+      <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
       {transactionObj.date}
       {transactionObj.text}
       {transactionObj.amount}

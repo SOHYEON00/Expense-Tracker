@@ -18,9 +18,9 @@ function useForm({ initialValues, onSubmit, validate}) {
         const {name, value} = event.target;
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
-        setErrors(validate(values));
+        // setErrors(validate(values));
     };
-    console.log(values);
+   
     const submitHandler = (event) => {
         event.preventDefault();
         setIsSubmit(true);
@@ -46,7 +46,7 @@ function useForm({ initialValues, onSubmit, validate}) {
             }
             addCategoryFB(categoryObj);
         }
-      
+
       setValues(initialValues);
     };
 

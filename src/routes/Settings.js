@@ -1,11 +1,11 @@
-import Categories from 'components/Categories'
+import CategoriesSection from 'components/CategoriesSection'
 import React from 'react'
 
 function Settings({categories}) {
     return (
         <>
          <article>
-             <Categories categories={categories}/>
+             <CategoriesSection categories={categories}/>
         </article>   
         </>
     )

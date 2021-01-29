@@ -19,7 +19,7 @@ function CategoryFactory() {
             <RadioComponent values={values} changeHandler={changeHandler} />
          
             <label htmlFor="category">카테고리 내용</label>
-            <input type="text" name="category" value={values.category} onChange={changeHandler} placeholder="카테고리 내용을 입력해주세요."/>
+            <input type="text" name="category" required value={values.category} onChange={changeHandler} placeholder="카테고리 내용을 입력해주세요."/>
           
           <input type="submit" name="submit" value="+"/>
         </form>
