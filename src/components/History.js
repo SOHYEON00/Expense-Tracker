@@ -11,6 +11,7 @@ function History({ transactions }) {
 
     return (
       <article>
+        <h3>History</h3>
         <section id="historyList" className="list">
             {copyTransactions && copyTransactions.map((transaction,idx) => {
                 let isLine = false;

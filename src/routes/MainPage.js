@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import TransactionFactory from 'components/TransactionFactory';
 import History from 'components/History';
 import Balance from 'components/Balance';
-import Nav from 'routes/Nav';
 import {dbService, TRANSACTIONS} from 'fBase';
 
 
@@ -27,11 +26,9 @@ function MainPage() {
     return (
       <>
         <Balance transactions={transactions} />
-        <h3>History</h3>
         <History transactions={transactions} />
         <button className="button" onClick={showContainer}>Add new transaction</button>
         <article id="newTransactionContainer" className=''>
-          <h3>Add New Transaction</h3>
           <TransactionFactory />
         </article>
       </>
