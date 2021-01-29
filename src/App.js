@@ -1,10 +1,13 @@
 import React from 'react';
-import MainPage from 'routes/MainPage';
+import AppRouter from "routes/Router";
 
 function App() {
   return (
     <main className="App">
-      <MainPage />
+    <AppRouter />
+    <footer>
+      &create; {new Date().getFullYear()} Expense Tracker - SOHYEON OH 오소현
+    </footer>
     </main>
   );
 }

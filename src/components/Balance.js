@@ -24,7 +24,6 @@ function Balance({ transactions }) {
 
   return (
     <article>
-      <h3>YOUR BALANCE</h3>
       {total}
       <section>
         <h4>수입</h4>
