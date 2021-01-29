@@ -4,6 +4,7 @@ import History from 'components/History';
 import Balance from 'components/Balance';
 import {dbService, TRANSACTIONS} from 'fBase';
 
+
 function MainPage() {
     const [transactions, setTransactions] = useState([]);
 
@@ -28,7 +29,6 @@ function MainPage() {
         <History transactions={transactions} />
         <button className="button" onClick={showContainer}>Add new transaction</button>
         <article id="newTransactionContainer" className=''>
-          <h3>Add New Transaction</h3>
           <TransactionFactory />
         </article>
       </>

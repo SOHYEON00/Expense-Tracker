@@ -19,6 +19,8 @@ function TransactionFactory() {
   }
 
   return (
+    <>
+    <h3>Add New Transaction</h3>
     <form onSubmit={submitHandler}>
       <fieldset id="type">
         <legend>Transaction type</legend>
@@ -75,6 +77,7 @@ function TransactionFactory() {
       
       <input type="submit" value="Add transaction" disabled={isSubmit}/>
     </form>
+    </>
   );
 }
 
