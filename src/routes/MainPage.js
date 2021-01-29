@@ -26,7 +26,7 @@ function MainPage() {
 
     return (
       <>
-        <Nav />
+        <h3>YOUR BALANCE</h3>
         <Balance transactions={transactions} />
         <h3>History</h3>
         <History transactions={transactions} />
