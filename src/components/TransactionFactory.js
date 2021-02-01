@@ -1,7 +1,7 @@
 import React from 'react';
-import useForm from 'components/useForm';
-import validate from 'components/validate';
-import RadioComponent from './RadioComponent';
+import useForm from 'utilities/useForm';
+import validate from 'utilities/validate';
+import RadioComponent from '../utilities/RadioComponent';
 import {TRANSACTIONS} from "fBase";
 
 function TransactionFactory() {

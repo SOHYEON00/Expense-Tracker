@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { CATEGORIES, dbService } from 'fBase';
-import DeleteButton from './DeleteButton';
+import DeleteButton from 'utilities/DeleteButton';
 // import UpdateHandler from 'components/UpdateHandler';
 
 function Category({ category }) {

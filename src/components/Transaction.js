@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteButton from "components/DeleteButton";
+import DeleteButton from "utilities/DeleteButton";
 import { TRANSACTIONS } from "fBase";
 
 function Transaction({ transactionObj, isLine }) {

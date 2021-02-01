@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryFactory from "components/CategoryFactory";
-import Category from './Category';
+import Category from 'components/Category';
 
 function CategoriesSection({ categories }) {
 
