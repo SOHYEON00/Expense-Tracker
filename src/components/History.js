@@ -10,16 +10,22 @@ function History({ transactions }) {
     });
 
     return (
-      <article>
+      <article className="historyComponent">
         <h3>History</h3>
         <section id="historyList" className="list">
             {copyTransactions && copyTransactions.map((transaction,idx) => {
                 let isLine = false;
+                
                 if(idx < copyTransactions.length-1){
                   if (transaction.date !== copyTransactions[idx + 1].date) {
                     isLine = true;
                   }
                 }
+
+                if(idx === 0) { //맨 최근 거래내역 날짜 추가 위한 조건문
+                  isLine = false;
+                }
+
                 return (
                     <Transaction
                         key={transaction.id}

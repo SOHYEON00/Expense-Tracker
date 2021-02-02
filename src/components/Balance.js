@@ -20,24 +20,28 @@ function Balance({ transactions }) {
                     .map(e => parseInt(e.amount))
                     .reduce((acc, cur) => (acc += cur), 0);
 
-  const total = income - expense;
+  const total = (income - expense > 0) ? `+${income - expense}` : `${income - expense}`;
 
   return (
-    <article>
-      <h3>YOUR BALANCE</h3>
-      {total}
-      <section>
-        <h4>수입</h4>
+    <article className="balanceComponent">
+      <section className="balance" >
+      <p className="name">YOUR BALANCE</p>
+      <p id="money">{total}</p>
+      </section>
+    <div>
+      <section className="each">
+        <p className="name">INCOME</p>
         <p id="moneyPlus" className="money plus">
-          {income}
+          +{income}
         </p>
       </section>
-      <section>
-        <h4>지출</h4>
+      <section className="each">
+        <p className="name">EXPENSE</p>
         <p id="moneyMinus" className="money minus">
-          {expense}
+      -{expense}
         </p>
       </section>
+    </div>
     </article>
   );
 }

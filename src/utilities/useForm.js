@@ -33,6 +33,7 @@ function useForm({ initialValues, onSubmit, validate}) {
             id: doc.id,
             ...doc.data(),
           })).filter(e => e.type !== values.type);
+   
           setCategories(categoryArray);
         });
       };
@@ -49,6 +50,7 @@ function useForm({ initialValues, onSubmit, validate}) {
             id: Date.now(),
             text: values.text,
             amount: values.amount,
+            category: values.category
             };
 
             addTransactionFB(transactionObj);

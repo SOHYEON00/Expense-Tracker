@@ -5,7 +5,6 @@ import { TRANSACTIONS } from "fBase";
 function Transaction({ transactionObj, isLine }) {
   const type = transactionObj.type;
   let colorByType = "";
-  const line = '-------';
 
   if (type === "수입") {
     colorByType = "moneyPlus";
@@ -15,14 +14,13 @@ function Transaction({ transactionObj, isLine }) {
 
   return (
     <>
-    
-    <div className={colorByType}>
+    {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
+    <p className={colorByType}>
       
       <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
-      {transactionObj.date}
-      {transactionObj.text}
-      {transactionObj.amount}
-    </div>{(isLine === true) && line}
+      <span className="text">{transactionObj.text}</span>
+      <span className="amount">{transactionObj.amount}</span>
+    </p>
     </>
   );
 }
