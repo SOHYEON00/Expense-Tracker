@@ -15,15 +15,24 @@
 #newTransactionContainer.show {
     transform: translateY(-100%);
 }
-
+#root {
+    width: 414px;
+    height: 896px;
+    padding: 1rem;
+    border: 1px solid;
+    background-color: #FFBE82;
+}
 body {
     font-family: Montserrat,sans-serif;
-    background-color: #FFBE82;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* nav!!! home-settings */
 nav {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -95,7 +104,7 @@ nav a {
 
 /* history */
 .historyComponent {
-    height: 24rem;
+    height: 27rem;
     padding: 2rem;
     background-color: white;
     margin: 0 -1rem; /*양 옆으로 다 하얀 배경으로 하려고*/

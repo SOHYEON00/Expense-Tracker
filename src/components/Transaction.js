@@ -11,7 +11,7 @@ function Transaction({ transactionObj, isLine }) {
   } else if (type === "지출") {
     colorByType = "moneyMinus";
   }
-
+  console.log(isLine);
   return (
     <>
       {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
