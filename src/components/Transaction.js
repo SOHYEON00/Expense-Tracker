@@ -14,13 +14,20 @@ function Transaction({ transactionObj, isLine }) {
 
   return (
     <>
-    {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
-    <p className={colorByType}>
-      
-      <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
-      <span className="text">{transactionObj.text}</span>
-      <span className="amount">{transactionObj.amount}</span>
-    </p>
+      {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
+      <div className={`${colorByType} transactionContainer`}>
+        <div className="buttonContainer">
+          <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
+          <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
+        </div>
+        <div className="textContainer">
+          <span className="text">
+            {transactionObj.text}
+            <span className="category">{transactionObj.category}</span>
+          </span>
+          <span className="amount">{transactionObj.amount}원</span>
+        </div>
+      </div>
     </>
   );
 }
