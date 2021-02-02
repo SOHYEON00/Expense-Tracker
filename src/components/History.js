@@ -14,15 +14,15 @@ function History({ transactions }) {
         <h3>History</h3>
         <section id="historyList" className="list">
             {copyTransactions && copyTransactions.map((transaction,idx) => {
-                let isLine = false;
+                let isNewDate = true;
                 if(idx === 0) { //맨 최근 거래내역 날짜 추가 위한 조건문
-                  isLine = false;
+                  isNewDate = true;
                 }
                 else if(idx > 0 && idx < copyTransactions.length-1){
                   if (transaction.date !== copyTransactions[idx - 1].date) {
-                    isLine = false;
+                    isNewDate = true;
                   } else {
-                    isLine = true;
+                    isNewDate = false;
                   }
                 }
 
@@ -32,7 +32,7 @@ function History({ transactions }) {
                     <Transaction
                         key={transaction.id}
                         transactionObj={transaction}
-                        isLine={isLine}
+                        isNewDate={isNewDate}
                     />
                     
                 )

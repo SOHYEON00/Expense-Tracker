@@ -2,7 +2,7 @@ import React from "react";
 import DeleteButton from "utilities/DeleteButton";
 import { TRANSACTIONS } from "fBase";
 
-function Transaction({ transactionObj, isLine }) {
+function Transaction({ transactionObj, isNewDate }) {
   const type = transactionObj.type;
   let colorByType = "";
 
@@ -11,10 +11,10 @@ function Transaction({ transactionObj, isLine }) {
   } else if (type === "지출") {
     colorByType = "moneyMinus";
   }
-  console.log(isLine);
+
   return (
     <>
-      {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
+      {isNewDate ? <p className="date">{transactionObj.date}</p> : ""}
       <div className={`${colorByType} transactionContainer`}>
         {/* <div className="buttonContainer">
           <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
