@@ -5,7 +5,7 @@ import Balance from 'components/Balance';
 import {dbService, TRANSACTIONS} from 'fBase';
 
 
-function MainPage() {
+function Home() {
     const [transactions, setTransactions] = useState([]);
 
     useEffect(() => {
@@ -35,4 +35,4 @@ function MainPage() {
     );
 }
 
-export default MainPage
+export default Home

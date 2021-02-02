@@ -5,6 +5,7 @@ function useForm({ initialValues, onSubmit, validate}) {
     const [values, setValues] = useState(initialValues);
     const [errors, setErrors] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
+    const [categories, setCategories] = useState([]);
 
     const addTransactionFB = async(obj) => {
         await dbService.collection(TRANSACTIONS).doc(`${obj.id}`).set(obj);
@@ -20,6 +21,17 @@ function useForm({ initialValues, onSubmit, validate}) {
         setIsSubmit(false);
         // setErrors(validate(values));
     };
+
+    const getCategories = async() => {
+      
+        await dbService.collection(CATEGORIES).onSnapshot((snapshot) => {
+          const categoryArray = snapshot.docs.map((doc) =>({
+            id: doc.id,
+            ...doc.data(),
+          })).filter(e => e.type !== values.type);
+          setCategories(categoryArray);
+        });
+      };
    
     const submitHandler = (event) => {
         event.preventDefault();
@@ -63,6 +75,8 @@ function useForm({ initialValues, onSubmit, validate}) {
         isSubmit,
         changeHandler,
         submitHandler,
+        getCategories,
+        categories
     
     }
 }

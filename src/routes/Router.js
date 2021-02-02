@@ -1,7 +1,7 @@
 import React from 'react';
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
 import Settings from "routes/Settings";
-import MainPage from "routes/MainPage";
+import Home from "routes/Home";
 import Nav from './Nav';
 
 function AppRouter({ categories }) {
@@ -13,7 +13,7 @@ function AppRouter({ categories }) {
           <Settings categories={categories}/>
         </Route>
         <Route exact path="/" >
-          <MainPage categories={categories}/>
+          <Home categories={categories}/>
         </Route>
       </Switch>
     </Router>
