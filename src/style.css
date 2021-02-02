@@ -18,6 +18,7 @@
 
 body {
     font-family: Montserrat,sans-serif;
+    background-color: #FFBE82;
 }
 /* nav!!! home-settings */
 nav {
@@ -26,6 +27,7 @@ nav {
     font-weight: 700;
     margin-top: 4rem;
     margin-bottom: 2rem;
+    
 }
 
 nav span {
@@ -74,6 +76,8 @@ nav span {
 .historyComponent {
     height: 24rem;
     padding: 2rem;
+    background-color: white;
+    margin: 0 -1rem; /*양 옆으로 다 하얀 배경으로 하려고*/
 }
 
 .historyComponent h3 {
@@ -93,7 +97,7 @@ nav span {
 }
 
 .historyComponent .textContainer {
-    width: 75%;
+    width: 100%; /* -> 75% */
     display: flex;
     justify-content: space-between;
 }

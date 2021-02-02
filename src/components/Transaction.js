@@ -16,10 +16,10 @@ function Transaction({ transactionObj, isLine }) {
     <>
       {!isLine ? <p className="date">{transactionObj.date}</p> : ""}
       <div className={`${colorByType} transactionContainer`}>
-        <div className="buttonContainer">
+        {/* <div className="buttonContainer">
           <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
           <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
-        </div>
+        </div> */}
         <div className="textContainer">
           <span className="text">
             {transactionObj.text}
