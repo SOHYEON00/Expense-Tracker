@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 function Nav() {
@@ -25,11 +23,11 @@ function Nav() {
   return (
     <nav>
       <Link to="/settings">
-        <FontAwesomeIcon icon={faAngleLeft} />
+      &#10094;
       </Link>
       <span>{title}</span>
       <Link to="/">
-        <FontAwesomeIcon icon={faAngleRight} />
+      &#10095;	
       </Link>
     </nav>
   );

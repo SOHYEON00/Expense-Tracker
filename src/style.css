@@ -28,12 +28,17 @@ nav {
     margin-top: 4rem;
     margin-bottom: 2rem;
     color: white;
-    
 }
 
 nav span {
     margin: 0 1rem;
+}
 
+nav a:visited {
+    color: white;
+}
+nav a {
+    text-decoration: none;
 }
 
 /* balance Componenet balance-income-expense */
@@ -61,6 +66,7 @@ nav span {
     font-size: 30px;
     margin: 0;
     font-weight: 700;
+    letter-spacing: -0.01rem;
 }
 
 .name{
