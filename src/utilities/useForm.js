@@ -20,10 +20,14 @@ function useForm({ initialValues, onSubmit, validate}) {
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
         // setErrors(validate(values));
+
+        if(name === "type"){ //카테고리 타입에 발생한 이벤트인 경우
+            getCategories(); //변경된 타입에 맞는 카테고리만 가져오기
+        }
     };
 
+    //get categories from db by category type
     const getCategories = async() => {
-      
         await dbService.collection(CATEGORIES).onSnapshot((snapshot) => {
           const categoryArray = snapshot.docs.map((doc) =>({
             id: doc.id,
@@ -34,7 +38,7 @@ function useForm({ initialValues, onSubmit, validate}) {
       };
    
     const submitHandler = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         setIsSubmit(true);
         setErrors(validate(values));
         

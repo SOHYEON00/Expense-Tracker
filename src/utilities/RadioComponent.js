@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RadioComponent({values, changeHandler, getCategories, categories}) {
+function RadioComponent({values, changeHandler, categories}) {
 
     let isExpense = true;
 
@@ -21,7 +21,7 @@ function RadioComponent({values, changeHandler, getCategories, categories}) {
           value="수입"
           checked={!isExpense}
           onChange={changeHandler}
-          onClick={getCategories}
+       
         />
         <label htmlFor="typeMinus">지출</label>
         <input
@@ -32,7 +32,6 @@ function RadioComponent({values, changeHandler, getCategories, categories}) {
           value="지출"
           checked={isExpense}
           onChange={changeHandler}
-          onClick={getCategories}
         />
         <select name="category" onChange={changeHandler}>
           <option>카테고리를 선택해주세요.</option>

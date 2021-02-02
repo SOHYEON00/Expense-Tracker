@@ -35,7 +35,6 @@ function TransactionFactory() {
           <RadioComponent
             values={values}
             changeHandler={changeHandler}
-            getCategories={getCategories}
             categories={categories}
           />
         </fieldset>
