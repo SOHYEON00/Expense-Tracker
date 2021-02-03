@@ -50,7 +50,7 @@ function useForm({ initialValues, onSubmit, validate}) {
             date: values.date,
             id: Date.now(),
             text: values.text,
-            amount: values.amount,
+            amount: +values.amount, //type이 number로 db에 저장
             category: values.category
             };
 
