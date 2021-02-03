@@ -11,7 +11,7 @@
 }
 
 #newTransactionContainer.show {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
 }
 #root {
     width: 414px;
@@ -102,7 +102,7 @@ nav a {
 
 /* history */
 .historyComponent {
-    height: 11rem; /*기존: 27rem*/
+    height: 13rem; /*기존: 27rem*/
     padding: 1.5rem;
     background-color: white;
     margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
@@ -189,27 +189,46 @@ nav a {
 footer {
     font-size: 8px;
     position: relative;
-    top: 10rem;
+    top: 7rem;
     text-align: center;
 }
 
 /* new transaction form */
 #newTransactionContainer {
     position: relative;
-    top: 12rem;
+    top: 11rem;
     width: 92%;
     left: -1rem;
     padding: 1.5rem;
     background-color: white;
     border-radius: 5px;
     margin: 0 0.5rem;
-    height: 8rem;
 }
 
 #newTransactionContainer h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 1rem;
     margin-top: 0;
+}
+
+#newTransactionContainer form{
+    display: flex;
+    flex-direction: column;
+}
+
+#newTransactionContainer form input[type="submit"] {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #FF8616;
+    border-radius: 2px;
+    border: none;
+    padding: 0.5rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 9rem;
+    position: relative;
+    left: 30%;
+    margin-top: 2rem;
 }
 
 .radios {
@@ -223,8 +242,8 @@ footer {
     font-weight: bold;
     color: white;
     position: relative;
-    top: -4.2rem;
-    right: -16rem;
+    top: -3.8rem;
+    right: -18rem;
     font-size: 13px
 }
 .radios input {
@@ -242,11 +261,21 @@ footer {
 input[type="radio"]:checked + label {
     background-color: #FFBE82;
     border-radius: 20px;
-    height: 1.5rem;
+    height: 2rem;
 }
 
 fieldset {
     border: none;
+}
+
+.radios select {
+    font-size: 12px;
+}
+
+#type {
+    padding: 0;
+    display: flex;
+    height: 1.4rem;
 }
 
 #info {
@@ -256,4 +285,25 @@ fieldset {
 
 #info p {
     display: flex;
+    width: 90%;
+    margin: 0.5rem;
+    justify-content: center;
 }
+
+#info label {
+    width: 20%;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+#info input {
+    color: #8D8888;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 0.3rem;
+    width: 9rem;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
