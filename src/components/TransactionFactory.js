@@ -28,49 +28,52 @@ function TransactionFactory() {
  
   return (
     <>
-      <h3>Add New Transaction</h3>
       <form onSubmit={submitHandler}>
-        <fieldset id="type">
-          <legend>Transaction type</legend>
-          <RadioComponent
-            values={values}
-            changeHandler={changeHandler}
-            categories={categories}
-          />
-        </fieldset>
+          <h3>Add New Transaction</h3>
 
+          <fieldset id="type">
+            <RadioComponent
+              values={values}
+              changeHandler={changeHandler}
+              categories={categories}
+            />
+          </fieldset>
         <fieldset id="info">
-          <legend>Transaction Info</legend>
-
-          <label htmlFor="date">Date</label>
-          {errors.date && <span>{errors.date}</span>}
-          <input
-            type="date"
-            name="date"
-            value={values.date}
-            onChange={changeHandler}
-            required
-          />
-          <label htmlFor="text">Text</label>
-          <input
-            type="text"
-            value={values.text}
-            onChange={changeHandler}
-            name="text"
-            id="text"
-            placeholder="Enter text"
-            required
-          />
-          <label htmlFor="amount">Amount</label>
-          {errors.amount && <span>{errors.amount}</span>}
-          <input
-            type="number"
-            id="amount"
-            name="amount"
-            value={values.amount}
-            onChange={changeHandler}
-            required
-          />
+          <p>
+            <label htmlFor="date">Date</label>
+            {errors.date && <span>{errors.date}</span>}
+            <input
+              type="date"
+              name="date"
+              value={values.date}
+              onChange={changeHandler}
+              required
+            />
+          </p>
+          <p>
+            <label htmlFor="text">Text</label>
+            <input
+              type="text"
+              value={values.text}
+              onChange={changeHandler}
+              name="text"
+              id="text"
+              placeholder="Enter text"
+              required
+            />
+          </p>
+          <p>
+            <label htmlFor="amount">Amount</label>
+            {errors.amount && <span>{errors.amount}</span>}
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              value={values.amount}
+              onChange={changeHandler}
+              required
+            />
+          </p>
         </fieldset>
 
         <input type="submit" value="Add transaction" disabled={isSubmit} />

@@ -27,14 +27,12 @@ function Home() {
       <>
         <Balance transactions={transactions} />
         <History transactions={transactions} />
-    
-          <button className="button" onClick={showContainer}>
-            Add new transaction
-          </button>
-       
         <article id="newTransactionContainer" className="">
           <TransactionFactory />
         </article>
+        <button className="button" onClick={showContainer}>
+          Add new transaction
+        </button>
       </>
     );
 }

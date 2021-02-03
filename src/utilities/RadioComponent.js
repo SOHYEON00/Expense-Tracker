@@ -9,35 +9,42 @@ function RadioComponent({values, changeHandler, categories}) {
     } else if(values.type === '수입'){
         isExpense = false;
     }
- 
+
+ console.log(values.type);
     return (
       <>
-        <label htmlFor="typePlus">수입</label>
-        <input
-          type="radio"
-          name="type"
-          id="typePlus"
-          className="transactionType"
-          value="수입"
-          checked={!isExpense}
-          onChange={changeHandler}
-       
-        />
-        <label htmlFor="typeMinus">지출</label>
-        <input
-          type="radio"
-          name="type"
-          id="typeMinus"
-          className="transactionType"
-          value="지출"
-          checked={isExpense}
-          onChange={changeHandler}
-        />
+        <div className="radios">
+    
+          <label htmlFor="typePlus">수입</label>
+          <input
+            type="radio"
+            name="type"
+            id="typePlus"
+            className="transactionType"
+            value="수입"
+            checked={!isExpense}
+            onChange={changeHandler}
+          />
+          <label htmlFor="typeMinus">지출</label>
+          <input
+            type="radio"
+            name="type"
+            id="typeMinus"
+            className="transactionType"
+            value="지출"
+            checked={isExpense}
+            onChange={changeHandler}
+          />
+        </div>
         <select name="category" onChange={changeHandler}>
           <option>카테고리를 선택해주세요.</option>
           {categories &&
             categories.map((e) => {
-              return <option key={e.id} value={e.category}>{e.category}</option>;
+              return (
+                <option key={e.id} value={e.category}>
+                  {e.category}
+                </option>
+              );
             })}
         </select>
       </>
