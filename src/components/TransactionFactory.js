@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import useForm from 'utilities/useForm';
 import validate from 'utilities/validate';
 import RadioComponent from '../utilities/RadioComponent';
@@ -11,8 +11,8 @@ function TransactionFactory() {
     isSubmit,
     changeHandler,
     submitHandler,
-    getCategories,
-    categories
+    categories,
+    getCategories
   } = useForm({
     initialValues: {
       formType: TRANSACTIONS,
@@ -25,7 +25,8 @@ function TransactionFactory() {
     onSubmit: (values) => {},
     validate,
   });
- 
+
+
   return (
     <>
       <form onSubmit={submitHandler}>

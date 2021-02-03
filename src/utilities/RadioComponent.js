@@ -10,11 +10,9 @@ function RadioComponent({values, changeHandler, categories}) {
         isExpense = false;
     }
 
- console.log(values.type);
     return (
-      <>
+      <>{`${isExpense}`}
         <div className="radios">
-    
           <label htmlFor="typePlus">수입</label>
           <input
             type="radio"
@@ -39,7 +37,7 @@ function RadioComponent({values, changeHandler, categories}) {
         <select name="category" onChange={changeHandler}>
           <option>카테고리를 선택해주세요.</option>
           {categories &&
-            categories.map((e) => {
+            categories.filter(e => e.type === values.type).map((e) => {
               return (
                 <option key={e.id} value={e.category}>
                   {e.category}

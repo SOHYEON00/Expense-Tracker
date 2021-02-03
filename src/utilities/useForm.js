@@ -7,6 +7,21 @@ function useForm({ initialValues, onSubmit, validate}) {
     const [isSubmit, setIsSubmit] = useState(false);
     const [categories, setCategories] = useState([]);
 
+    const getCategories = async() => {
+        await dbService.collection(CATEGORIES).onSnapshot((snapshot) => {
+          const categoryArray = snapshot.docs.map((doc) =>({
+            id: doc.id,
+            ...doc.data(),
+          }))
+          setCategories(categoryArray);
+        });
+      };
+
+
+    if(categories.length === 0 ){
+        getCategories();
+    }
+    
     const addTransactionFB = async(obj) => {
         await dbService.collection(TRANSACTIONS).doc(`${obj.id}`).set(obj);
     };
@@ -20,24 +35,15 @@ function useForm({ initialValues, onSubmit, validate}) {
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
         // setErrors(validate(values));
-
+      console.log(event.target);
         if(name === "type"){ //카테고리 타입에 발생한 이벤트인 경우
             getCategories(); //변경된 타입에 맞는 카테고리만 가져오기
         }
     };
 
     //get categories from db by category type
-    const getCategories = async() => {
-        await dbService.collection(CATEGORIES).onSnapshot((snapshot) => {
-          const categoryArray = snapshot.docs.map((doc) =>({
-            id: doc.id,
-            ...doc.data(),
-          })).filter(e => e.type !== values.type);
-   
-          setCategories(categoryArray);
-        });
-      };
-   
+    
+
     const submitHandler = (event) => {
         event.preventDefault()
         setIsSubmit(true);
@@ -81,8 +87,8 @@ function useForm({ initialValues, onSubmit, validate}) {
         isSubmit,
         changeHandler,
         submitHandler,
-        getCategories,
-        categories
+        categories,
+        getCategories
     
     }
 }
