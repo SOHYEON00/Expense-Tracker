@@ -34,11 +34,10 @@ function useForm({ initialValues, onSubmit, validate}) {
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
         // setErrors(validate(values));
-        console.log(event.target)
     };
 
     //get categories from db by category type
-    
+    console.log(values)
 
     const submitHandler = (event) => {
         event.preventDefault()
