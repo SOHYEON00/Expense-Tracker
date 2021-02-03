@@ -1,22 +1,30 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
 function RadioComponent({values, changeHandler, categories}) {
 
-    let chkIncome = "";
-    let chkExpense = "checked";
+    const slideRef = useRef();
 
-    if(values.type === '지출'){
-      chkIncome = '';
-      chkExpense = 'checked';
-    } else if(values.type === '수입'){
-      chkIncome = 'checked';
-      chkExpense = '';
+    const slideMoveHandler = () => {
+      const slideDiv = slideRef.current;
+      if(!slideDiv.classList.contains('slideMove')){
+        slideDiv.classList.remove('slideBack');
+        slideDiv.classList.add('slideMove');
+      } else {
+        slideDiv.classList.remove('slideMove');
+        slideDiv.classList.add('slideBack');
+      }
+
+      
     }
+
+    
 
     return (
       <>
-        <div className="radios">
-          <label htmlFor="typePlus" className={chkIncome}>수입</label>
+        
+        <div className="radios" >
+          <div className="checked" ref={slideRef}></div>
+          <label htmlFor="typePlus" className="labels" onClick={slideMoveHandler}>+</label>
           <input
             type="radio"
             name="type"
@@ -25,7 +33,7 @@ function RadioComponent({values, changeHandler, categories}) {
             value="수입"
             onChange={changeHandler}
           />
-          <label htmlFor="typeMinus" className={chkExpense}>지출</label>
+          <label htmlFor="typeMinus" className="labels" onClick={slideMoveHandler}>-</label>
           <input
             type="radio"
             name="type"
@@ -34,6 +42,7 @@ function RadioComponent({values, changeHandler, categories}) {
             value="지출"
             onChange={changeHandler}
           />
+          
         </div>
         <select name="category" onChange={changeHandler}>
           <option>카테고리를 선택해주세요.</option>

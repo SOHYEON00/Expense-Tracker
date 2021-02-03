@@ -188,9 +188,9 @@ nav a {
 
 footer {
     font-size: 8px;
-    position: fixed;
-    top: 95%;
-    left: 34%;
+    position: relative;
+    text-align: center;
+    top: 5rem;
 }
 
 /* new transaction form */
@@ -228,7 +228,7 @@ footer {
     width: 9rem;
     position: relative;
     left: 30%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .radios {
@@ -244,26 +244,63 @@ footer {
     position: relative;
     top: -3.8rem;
     right: -18rem;
-    font-size: 13px
+    font-size: 13px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 .radios input {
     display: none;
 }
 
-.radios label {
+.labels {
     height: 2rem;
     width: 3rem;
+    color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
 }
+
+@keyframes moveRight {
+    0% {left: 0%;}
+    100% {left: 50%;}
+}
+
+@keyframes moveLeft {
+    0% {left: 50%;}
+    100% {left: 0%;}
+}
+
+.slideMove { 
+    animation-name: moveRight;
+    animation-duration: 0.8s;
+    animation-duration: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.slideBack{
+    animation-name: moveLeft;
+    animation-duration: 0.8s;
+    animation-duration: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
 
 .checked {
-    background-color: #FFBE82;
-    border-radius: 20px;
     height: 2rem;
+    width: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    left: 73%;
+    z-index: 1;
 }
-
+ 
 fieldset {
     border: none;
 }
@@ -299,7 +336,7 @@ fieldset {
 #info input {
     color: #8D8888;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     padding: 0.3rem;
     width: 9rem;
     border: none;

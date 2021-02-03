@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import useForm from 'utilities/useForm';
 import validate from 'utilities/validate';
 import RadioComponent from '../utilities/RadioComponent';
@@ -12,7 +12,6 @@ function TransactionFactory() {
     changeHandler,
     submitHandler,
     categories,
-    getCategories
   } = useForm({
     initialValues: {
       formType: TRANSACTIONS,
@@ -31,8 +30,8 @@ function TransactionFactory() {
     <>
       <form onSubmit={submitHandler}>
           <h3>Add New Transaction</h3>
-
           <fieldset id="type">
+
             <RadioComponent
               values={values}
               changeHandler={changeHandler}
