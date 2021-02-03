@@ -20,8 +20,7 @@ function RadioComponent({values, changeHandler, categories}) {
     
 
     return (
-      <>
-        
+      <>  
         <div className="radios" >
           <div className="checked" ref={slideRef}></div>
           <label htmlFor="typePlus" className="labels" onClick={slideMoveHandler}>+</label>

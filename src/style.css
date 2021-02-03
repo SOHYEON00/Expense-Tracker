@@ -125,12 +125,15 @@ nav a {
     font-weight: bold;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
+    height: 1rem;
 }
 
 .historyComponent .textContainer {
     width: 100%; /* -> 75% */
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+    background-color: white;
 }
 
 .historyComponent .date {
@@ -344,3 +347,29 @@ fieldset {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* 삭제 버튼 */
+
+.buttonContainer { 
+    opacity: 0;
+    width: 0px;
+    z-index: 0;
+    margin-right: 0.5rem;
+}
+
+
+.transactionContainer:hover .buttonContainer{
+    display:flex;
+    width: 3rem;
+    opacity: 1;
+    transition: width 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.deleteBtn {
+    cursor: pointer;
+    background-color: #FA4B4B;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}

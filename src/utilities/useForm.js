@@ -37,7 +37,6 @@ function useForm({ initialValues, onSubmit, validate}) {
     };
 
     //get categories from db by category type
-    console.log(values)
 
     const submitHandler = (event) => {
         event.preventDefault()
