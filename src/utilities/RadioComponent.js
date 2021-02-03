@@ -6,12 +6,12 @@ function RadioComponent({values, changeHandler, categories}) {
 
     const slideMoveHandler = () => {
       const slideDiv = slideRef.current;
-      if(!slideDiv.classList.contains('slideBack')){
-        slideDiv.classList.remove('slideMove');
-        slideDiv.classList.add('slideBack');
+      if(!slideDiv.classList.contains('toRight')){
+        slideDiv.classList.remove('toLeft');
+        slideDiv.classList.add('toRight');
       } else {
-        slideDiv.classList.remove('slideBack');
-        slideDiv.classList.add('slideMove');
+        slideDiv.classList.remove('toRight');
+        slideDiv.classList.add('toLeft');
       }
 
       
