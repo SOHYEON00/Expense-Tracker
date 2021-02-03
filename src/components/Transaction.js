@@ -1,6 +1,7 @@
 import React from "react";
 import DeleteButton from "utilities/DeleteButton";
 import { TRANSACTIONS } from "fBase";
+import numToString from 'utilities/printComma';
 
 function Transaction({ transactionObj, isNewDate }) {
   const type = transactionObj.type;
@@ -25,7 +26,7 @@ function Transaction({ transactionObj, isNewDate }) {
             {transactionObj.text}
             <span className="category">{transactionObj.category}</span>
           </span>
-          <span className="amount">{transactionObj.amount}원</span>
+          <span className="amount">{numToString(transactionObj.amount)}원</span>
         </div>
       </div>
     </>
