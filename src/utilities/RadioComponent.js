@@ -2,35 +2,36 @@ import React from 'react'
 
 function RadioComponent({values, changeHandler, categories}) {
 
-    let isExpense = true;
+    let chkIncome = "";
+    let chkExpense = "checked";
 
     if(values.type === '지출'){
-        isExpense = true;
+      chkIncome = '';
+      chkExpense = 'checked';
     } else if(values.type === '수입'){
-        isExpense = false;
+      chkIncome = 'checked';
+      chkExpense = '';
     }
 
     return (
-      <>{`${isExpense}`}
+      <>
         <div className="radios">
-          <label htmlFor="typePlus">수입</label>
+          <label htmlFor="typePlus" className={chkIncome}>수입</label>
           <input
             type="radio"
             name="type"
             id="typePlus"
             className="transactionType"
             value="수입"
-            checked={!isExpense}
             onChange={changeHandler}
           />
-          <label htmlFor="typeMinus">지출</label>
+          <label htmlFor="typeMinus" className={chkExpense}>지출</label>
           <input
             type="radio"
             name="type"
             id="typeMinus"
             className="transactionType"
             value="지출"
-            checked={isExpense}
             onChange={changeHandler}
           />
         </div>

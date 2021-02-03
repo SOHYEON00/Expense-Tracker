@@ -17,8 +17,7 @@ function useForm({ initialValues, onSubmit, validate}) {
         });
       };
 
-
-    if(categories.length === 0 ){
+    if(categories.length === 0 ){ //첫 렌더링 때, 모든 카테고리 목록을 가져오기 위한 조건문
         getCategories();
     }
     
@@ -35,10 +34,7 @@ function useForm({ initialValues, onSubmit, validate}) {
         setValues({ ...values, [name]: value});
         setIsSubmit(false);
         // setErrors(validate(values));
-      console.log(event.target);
-        if(name === "type"){ //카테고리 타입에 발생한 이벤트인 경우
-            getCategories(); //변경된 타입에 맞는 카테고리만 가져오기
-        }
+        console.log(event.target)
     };
 
     //get categories from db by category type

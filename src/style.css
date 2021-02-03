@@ -258,7 +258,7 @@ footer {
     align-items: center;
 }
 
-input[type="radio"]:checked + label {
+.checked {
     background-color: #FFBE82;
     border-radius: 20px;
     height: 2rem;
