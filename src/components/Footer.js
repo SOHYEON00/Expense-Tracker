@@ -17,11 +17,9 @@ function Footer() {
 
     return (
       <footer>
-        {/* <div className="newBtnContainer"> */}
           <button className="button" onClick={showContainer} ref={refNewBtn}>
             Add new transaction
           </button>
-        {/* </div> */}
         &copy; {new Date().getFullYear()} Expense Tracker - SOHYEON OH 오소현
       </footer>
     );

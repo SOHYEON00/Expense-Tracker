@@ -176,7 +176,7 @@ nav a {
 }
 
 #historyComponent::-webkit-scrollbar-track  { /*여백*/
-    background-color:#f6dabf;
+    background-color:white;
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px white;
 }
