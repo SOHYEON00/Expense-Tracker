@@ -8,10 +8,12 @@
 
 #newTransactionContainer {
     transition: transform 1s ease;
+    display: none;
 }
 
 #newTransactionContainer.show {
     transform: translateY(-50%);
+    display: block;
 }
 #root {
     width: 414px;
@@ -19,6 +21,7 @@
     padding: 1rem;
     border: 1px solid;
     background-color: #ffaa72;
+    overflow: hidden;
 }
 body {
     font-family: Montserrat,sans-serif;
@@ -70,7 +73,7 @@ nav a {
 }
 
 .balance #money {
-    font-size: 30px;
+    font-size: 27px;
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.01rem;
@@ -101,22 +104,27 @@ nav a {
 /* 1rem : 25px */
 
 /* history */
-.historyComponent {
-    height: 13rem; /*기존: 27rem*/
+#historyComponent {
+    height: 32rem; /*기존: 27rem*/
     padding: 1.5rem;
     background-color: white;
     margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
     overflow: auto;
     border-radius: 5px;
+    transition: height 1s ease;
 }
 
-.historyComponent h3 {
+#historyComponent.short{
+    height: 13rem;
+}
+
+#historyComponent h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 1rem;
     margin-top: 0;
 }
 
-.historyComponent .transactionContainer {
+#historyComponent .transactionContainer {
     margin: 0.5rem 0;
     display: flex;
     justify-content: space-between;
@@ -128,7 +136,7 @@ nav a {
     height: 1rem;
 }
 
-.historyComponent .textContainer {
+#historyComponent .textContainer {
     width: 100%; /* -> 75% */
     display: flex;
     justify-content: space-between;
@@ -136,7 +144,7 @@ nav a {
     background-color: white;
 }
 
-.historyComponent .date {
+#historyComponent .date {
     font-size: 13px;
     font-weight: bold;
 }
@@ -156,21 +164,33 @@ nav a {
 }
 
 /* history scroll design */
-.historyComponent::-webkit-scrollbar {
+#historyComponent::-webkit-scrollbar {
     width: 5px;
     background-color: #f7f7f7;
 }
 
-.historyComponent::-webkit-scrollbar-thumb  { /*막대*/
+#historyComponent::-webkit-scrollbar-thumb  { /*막대*/
     background-color: #f69c47;
     border-radius: 10px;
     background-clip: padding-box; /*thumb와 track 사이에 공간주고 싶어서 사용. 기존의 padding, margin은 적용되지 않음.*/
 }
 
-.historyComponent::-webkit-scrollbar-track  { /*여백*/
+#historyComponent::-webkit-scrollbar-track  { /*여백*/
     background-color:#f6dabf;
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px white;
+}
+
+
+/* footer */
+
+footer {
+    font-size: 6px;
+    padding-top: 3rem;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .button {
@@ -180,21 +200,11 @@ nav a {
     background-color: #FF8616;
     border-radius: 2px;
     border: none;
-    position: relative;
-    top: 3rem;
-    left: 7.6rem;
-    padding: 0.5rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 
-/* footer */
-
-footer {
-    font-size: 8px;
-    position: relative;
-    text-align: center;
-    top: 5rem;
-}
 
 /* new transaction form */
 #newTransactionContainer {

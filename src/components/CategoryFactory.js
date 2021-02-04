@@ -5,7 +5,7 @@ import validate from 'utilities/validate';
 import {CATEGORIES} from 'fBase';
 
 function CategoryFactory() {
-    const { values, errors, isSubmit, changeHandler, submitHandler} = useForm({
+    const { values, changeHandler, submitHandler} = useForm({
         initialValues: {formType: CATEGORIES, type: "지출", category: ""},
         onSubmit: (values) => {},
         validate

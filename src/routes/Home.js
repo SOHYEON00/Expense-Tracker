@@ -18,10 +18,6 @@ function Home() {
       });
     }, [])
 
-    const showContainer = () => {
-      const container = document.getElementById('newTransactionContainer');
-      container.classList.toggle('show');
-    }
 
     return (
       <>
@@ -30,9 +26,6 @@ function Home() {
         <article id="newTransactionContainer" className="">
           <TransactionFactory />
         </article>
-        <button className="button" onClick={showContainer}>
-          Add new transaction
-        </button>
       </>
     );
 }

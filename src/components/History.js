@@ -10,7 +10,7 @@ function History({ transactions }) {
     });
 
     return (
-      <article className="historyComponent">
+      <article id="historyComponent">
         <h3>History</h3>
         <section id="historyList" className="list">
             {copyTransactions && copyTransactions.map((transaction,idx) => {

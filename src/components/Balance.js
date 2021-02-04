@@ -6,8 +6,10 @@ function Balance({ transactions }) {
 
     const total = numToString(copyTransactions
                       .map((e) => {
-                          if(e.type === '수입') { return +e.amount}
-                          else if(e.type === '지출') { return -e.amount}
+                          let returnedAmount = 0;
+                          if(e.type === '수입') { returnedAmount = +e.amount}
+                          else if(e.type === '지출') { returnedAmount = -e.amount}
+                          return returnedAmount
                       }) // return amount with +/- set by type
                       .reduce((acc, cur) => (acc += cur), 0)); //get total
   

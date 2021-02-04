@@ -1,6 +1,7 @@
 import { dbService, CATEGORIES } from 'fBase';
 import React, {useEffect, useState} from 'react';
 import AppRouter from "routes/Router";
+import Footer from 'components/Footer';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -20,9 +21,7 @@ function App() {
   return (
     <main className="App">
     <AppRouter categories={categories}/>
-    <footer>
-      &copy; {new Date().getFullYear()} Expense Tracker - SOHYEON OH 오소현
-    </footer>
+    <Footer />
     </main>
   );
 }
