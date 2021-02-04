@@ -184,9 +184,15 @@ nav a {
 
 /* footer */
 
+.addNewButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
 footer {
     font-size: 6px;
-    padding-top: 3rem;
+    padding-top: 4rem;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
@@ -202,7 +208,6 @@ footer {
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: 0.5rem;
-    margin-bottom: 2.5rem;
 }
 
 

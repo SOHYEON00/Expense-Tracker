@@ -11,8 +11,7 @@ function CategoryFactory() {
         validate
         });
     return (
-      <>
-        <button>+</button>
+     
 
         <form onSubmit={submitHandler}>
       
@@ -23,7 +22,7 @@ function CategoryFactory() {
           
           <input type="submit" name="submit" value="+"/>
         </form>
-      </>
+     
     );
 }
 

@@ -6,8 +6,9 @@ function CategoriesSection({ categories }) {
 
   
     return (
-      <div>
+      <>
         <CategoryFactory />
+        <div>
         <h3>카테고리 설정</h3>
         <table>
           <thead>
@@ -23,7 +24,8 @@ function CategoriesSection({ categories }) {
               })}
           </tbody>
         </table>
-      </div>
+        </div>
+      </>
     );
 }
 

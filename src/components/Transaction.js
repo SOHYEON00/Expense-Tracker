@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import DeleteButton from "utilities/DeleteButton";
+import UpdateButton from "utilities/UpdateButton";
 import { TRANSACTIONS } from "fBase";
 import numToString from 'utilities/printComma';
 
@@ -24,7 +25,7 @@ function Transaction({ transactionObj, isNewDate }) {
       <div className={`${colorByType} transactionContainer`} onClick={showBtnContainer}>
         <div className="buttonContainer" ref={refBtns}>
           <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
-          <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
+          <UpdateButton formType={TRANSACTIONS} itemId={transactionObj.id} text={transactionObj.text} />
         </div>
         <div className="textContainer">
           <span className="text">
