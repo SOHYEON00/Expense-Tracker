@@ -193,10 +193,9 @@ nav a {
 footer {
     font-size: 6px;
     padding-top: 4rem;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 83%;
+    left: 38.5%;
 }
 
 .button {
