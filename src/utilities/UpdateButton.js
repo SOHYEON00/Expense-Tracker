@@ -26,16 +26,15 @@ function UpdateButton({ formType, itemId, text }) {
     const UpdateHandler = async() => {
       window.alert("내용이 업데이트됩니다.");
 
-    //   if (formType === TRANSACTIONS) {
-    //     await dbService.doc(`${formType}/${itemId}`).update({
-    //         category: newText,
-    //     });
-    //   } else if (formType === CATEGORIES) {
-    //     await dbService.doc(`${formType}/${itemId}`).update({
-    //         category: newText,
-    //     });
-    //   }
-
+      if (formType === TRANSACTIONS) {
+        await dbService.doc(`${formType}/${itemId}`).update({
+            category: newText,
+        });
+      } else if (formType === CATEGORIES) {
+        await dbService.doc(`${formType}/${itemId}`).update({
+            category: newText,
+        });
+      }
       setIsEditing(false);
     }
     return (

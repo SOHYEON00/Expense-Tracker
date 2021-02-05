@@ -17,6 +17,7 @@ function Category({ category }) {
     const onTextHandler = (e) => {
         setNewCategoryText(e.target.value);
     }
+
     const UpdateHandler = async(e) => {
         e.preventDefault();
         setOpenModal(false);
@@ -39,12 +40,11 @@ function Category({ category }) {
         </td>
         {openModal && (
             <Modal
-              formType={CATEGORIES}
               header="카테고리 수정"
               onToggleHandler={onToggleHandler}
               contents={
                   <>
-                  <p>{`${category.type} - ${category.category}`}</p>
+                  <p>{`${category.type} - `} <span>{category.category}</span></p>
                 <form onSubmit={UpdateHandler}>
                   <input
                     type="text"

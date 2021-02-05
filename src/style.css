@@ -369,7 +369,6 @@ label {
 .buttonContainer { 
     opacity: 0;
     width: 0px;
-    z-index: 0;
     margin-right: 0.5rem;
 }
 
@@ -471,12 +470,13 @@ tbody td{
     width: 45%;
     left: 13.5rem;
     background-color: snow;
-    height: 9rem;
     padding: 0.5rem;
     box-shadow: 0px 10px 10px rgb(0 0 0 / 25%);
-    z-index: 1;
+    z-index: 10;
     animation: modal-show .3s;
     border-radius: 14px;
+    text-align: center;
+    
 }
 
 @keyframes modal-show {
@@ -522,27 +522,35 @@ tbody td{
 
 .modal form {
     width: 100%;
+    margin: 1rem 0;
 }
 
 .modal div {
     height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #bbb;
+    padding: 1rem;
 }
 
 .modal div button {
-    position: relative;
-    top: -3.5rem;
-    right: -10rem;
     border: none;
     background-color: snow;
 }
 
-.modal div h3 {
-    padding: 1rem;
-    text-align: left;
+.modal div h4 {
+    margin: 0;
 }
 
 .modal p {
+    font-weight: normal;
     margin-top: 0;
+}
+
+.modal span {
     font-weight: bold;
 }
 
@@ -567,4 +575,5 @@ tbody td{
     top: 9rem;
     left: 12.4rem;
     animation: modal-bg-show .3s;
+    z-index: 10;
 }

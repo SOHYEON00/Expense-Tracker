@@ -1,15 +1,13 @@
 import React from 'react'
 
-function Modal({formType, header, contents, onToggleHandler}) {
+function Modal({header, contents, onToggleHandler}) {
     
     
     return (
     <>
     <div id="coverBackground"></div>
-        <div className="modal">
-            
-            <div>
-              <h3>{header}</h3>  
+        <div className="modal"><div>
+              <h4>{header}</h4>  
               <button onClick={onToggleHandler} >X</button>
             </div>
             
