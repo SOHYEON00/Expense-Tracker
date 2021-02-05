@@ -252,12 +252,10 @@ footer {
     background: #C4C4C4;
     border-radius: 20px;
     width: 6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 2rem;
     font-weight: bold;
     color: white;
+    display: flex;
     position: relative;
     top: -3.8rem;
     right: -18rem;
@@ -279,6 +277,7 @@ footer {
     font-size: 20px;
     font-weight: 600;
     z-index: 2;
+    margin: 0;
 }
 
 @keyframes moveToLeft {
@@ -441,4 +440,5 @@ thead th {
 
 tbody td{
     padding: 0.4rem;
+    font-weight: bold;
 }
