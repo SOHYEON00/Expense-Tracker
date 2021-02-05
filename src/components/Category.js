@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { CATEGORIES, dbService } from 'fBase';
 import DeleteButton from 'utilities/DeleteButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faPencilAlt, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from 'utilities/Modal';
 // import UpdateHandler from 'components/UpdateHandler';
 
@@ -50,8 +50,9 @@ function Category({ category }) {
                     type="text"
                     value={newCategoryText}
                     onChange={onTextHandler}
+                    className="input"
                   />
-                  <input type="submit" />
+                  <button className="submitButtonIcon" ><FontAwesomeIcon icon={faArrowCircleRight} /></button>
                 </form>
                 </>
               }
