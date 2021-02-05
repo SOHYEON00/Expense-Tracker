@@ -88,7 +88,7 @@ nav a {
 
 .each .money {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     
 }
@@ -461,4 +461,56 @@ thead th {
 tbody td{
     padding: 0.4rem;
     font-weight: bold;
+}
+
+.modal {
+    position: absolute;
+    top: 43%;
+    width: 45%;
+    left: 14rem;
+    background-color: #f1f1f1;
+    height: 9rem;
+    animation: modal-bg-show .3s;
+}
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal form {
+    width: 100%;
+}
+
+.modal div {
+    height: 45%;
+}
+
+.modal div button {
+    position: relative;
+    top: -3.5rem;
+    right: -10rem;
+}
+
+.modal div h3 {
+    padding: 1rem;
+    text-align: left;
+}
+
+.modal p {
+    margin-top: 0;
 }

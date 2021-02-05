@@ -3,14 +3,15 @@ import { CATEGORIES, dbService } from 'fBase';
 import DeleteButton from 'utilities/DeleteButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import Modal from 'utilities/Modal';
 // import UpdateHandler from 'components/UpdateHandler';
 
 function Category({ category }) {
     const [newCategoryText, setNewCategoryText] = useState(category.category);
-    const [isEditing, setIsEditing] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
     const onToggleHandler = () => {
-        setIsEditing(prev => !prev);
+        setOpenModal(prev => !prev);
     };
 
     const onTextHandler = (e) => {
@@ -18,10 +19,11 @@ function Category({ category }) {
     }
     const UpdateHandler = async(e) => {
         e.preventDefault();
+        setOpenModal(false);
         await dbService.doc(`${CATEGORIES}/${category.id}`).update({
             category: newCategoryText,
         });
-        setIsEditing(false);
+        
     }
     return (
       <tr>
@@ -34,17 +36,27 @@ function Category({ category }) {
           <button onClick={onToggleHandler} className="deleteBtn">
             <FontAwesomeIcon icon={faPencilAlt} />
           </button>
-          {isEditing && (
-            <form onSubmit={UpdateHandler}>
-              <input
-                type="text"
-                value={newCategoryText}
-                onChange={onTextHandler}
-              />
-              <input type="submit" />
-            </form>
-          )}{" "}
         </td>
+        {openModal && (
+            <Modal
+              formType={CATEGORIES}
+              header="카테고리 수정"
+              onToggleHandler={onToggleHandler}
+              contents={
+                  <>
+                  <p>{`${category.type} - ${category.category}`}</p>
+                <form onSubmit={UpdateHandler}>
+                  <input
+                    type="text"
+                    value={newCategoryText}
+                    onChange={onTextHandler}
+                  />
+                  <input type="submit" />
+                </form>
+                </>
+              }
+            />
+          )}
       </tr>
     );
 }
