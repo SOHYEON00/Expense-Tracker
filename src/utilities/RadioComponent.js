@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 
-function RadioComponent({values, changeHandler, categories}) {
+function RadioComponent({values, changeHandler}) {
 
     const slideRef = useRef();
 
@@ -43,17 +43,6 @@ function RadioComponent({values, changeHandler, categories}) {
           />
           
         </div>
-        <select name="category" onChange={changeHandler}>
-          <option>카테고리를 선택해주세요.</option>
-          {categories &&
-            categories.filter(e => e.type === values.type).map((e) => {
-              return (
-                <option key={e.id} value={e.category}>
-                  {e.category}
-                </option>
-              );
-            })}
-        </select>
       </>
     );
 }

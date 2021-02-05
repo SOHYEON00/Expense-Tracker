@@ -12,15 +12,14 @@ function CategoryFactory() {
         });
     return (
      
-
-        <form onSubmit={submitHandler}>
-      
+        <form onSubmit={submitHandler} className="categoryForm">
+            <h3>New Category</h3>
             <RadioComponent values={values} changeHandler={changeHandler} />
-         
-            <label htmlFor="category">카테고리 내용</label>
-            <input type="text" name="category" required value={values.category} onChange={changeHandler} placeholder="카테고리 내용을 입력해주세요."/>
+            <p>
+            <label htmlFor="category">Contents</label>
+            <input type="text" className="input" name="category" required value={values.category} onChange={changeHandler} placeholder="Enter contents..."/>
           
-          <input type="submit" name="submit" value="+"/>
+          <input type="submit" className="button" name="submit" value="+"/></p>
         </form>
      
     );

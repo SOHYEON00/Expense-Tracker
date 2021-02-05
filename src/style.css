@@ -193,9 +193,9 @@ nav a {
 footer {
     font-size: 6px;
     padding-top: 4rem;
-    position: fixed;
-    top: 83%;
-    left: 38.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .button {
@@ -222,7 +222,7 @@ footer {
     margin: 0 0.5rem;
 }
 
-#newTransactionContainer h3 {
+ h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 1rem;
     margin-top: 0;
@@ -344,13 +344,16 @@ fieldset {
     justify-content: center;
 }
 
-#info label {
+label {
     width: 20%;
     text-align: right;
     margin-right: 1rem;
+    font-weight: bold;
+    font-size: 16px;
+    color: #595656;
 }
 
-#info input {
+.input {
     color: #8D8888;
     font-weight: bold;
     font-size: 12px;
@@ -386,4 +389,34 @@ fieldset {
     font-weight: bold;
     font-size: 15px;
     color: white;
+}
+
+
+/* settings */
+
+#settingSection {
+    height: 40rem;
+    padding: 1.5rem;
+    background-color: white;
+    margin: 0 -0.5rem;
+    border-radius: 5px;
+}
+
+
+
+#settingSection input[type="submit"] {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #FF8616;
+    border-radius: 2px;
+    border: none;
+    
+}
+
+.categoryForm p{
+    margin: 0;
+    position: relative;
+    top: -2.5rem;
+    text-align: center;
 }

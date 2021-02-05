@@ -4,7 +4,7 @@ import React from 'react'
 function Settings({categories}) {
     return (
         <>
-         <article>
+         <article id="settingSection">
              <CategoriesSection categories={categories}/>
         </article>   
         </>

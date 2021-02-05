@@ -35,8 +35,18 @@ function TransactionFactory() {
             <RadioComponent
               values={values}
               changeHandler={changeHandler}
-              categories={categories}
             />
+            <select name="category" onChange={changeHandler}>
+          <option>카테고리를 선택해주세요.</option>
+          {categories &&
+            categories.filter(e => e.type === values.type).map((e) => {
+              return (
+                <option key={e.id} value={e.category}>
+                  {e.category}
+                </option>
+              );
+            })}
+        </select>
           </fieldset>
         <fieldset id="info">
           <p>
@@ -48,6 +58,7 @@ function TransactionFactory() {
               value={values.date}
               onChange={changeHandler}
               required
+              className="input"
             />
           </p>
           <p>
@@ -60,6 +71,7 @@ function TransactionFactory() {
               id="text"
               placeholder="Enter text"
               required
+              className="input"
             />
           </p>
           <p>
@@ -72,6 +84,7 @@ function TransactionFactory() {
               value={values.amount}
               onChange={changeHandler}
               required
+              className="input"
             />
           </p>
         </fieldset>
