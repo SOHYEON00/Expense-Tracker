@@ -423,6 +423,7 @@ label {
 .listTable {
     height: 65%;
     overflow: auto;
+    width: 100%;
     padding-right: 1.4rem;
 }
 
