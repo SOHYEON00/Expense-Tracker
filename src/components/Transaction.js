@@ -58,7 +58,16 @@ function Transaction({ transactionObj, isNewDate }) {
             <FontAwesomeIcon icon={faPencilAlt} />
           </button>
           </div>
-          {openModal && (
+     
+        <div className="textContainer">
+          <span className="text">
+            {transactionObj.text}
+            <span className="category">{transactionObj.category}</span>
+          </span>
+          <span className="amount">{numToString(transactionObj.amount)}원</span>
+        </div>
+      </div>
+      {openModal && (
             <Modal
               header="거래 내역 수정"
               onToggleHandler={onToggleHandler}
@@ -83,15 +92,6 @@ function Transaction({ transactionObj, isNewDate }) {
               }
             />
           )}
-     
-        <div className="textContainer">
-          <span className="text">
-            {transactionObj.text}
-            <span className="category">{transactionObj.category}</span>
-          </span>
-          <span className="amount">{numToString(transactionObj.amount)}원</span>
-        </div>
-      </div>
     </>
   );
 }

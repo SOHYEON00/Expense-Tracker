@@ -22,6 +22,9 @@
     border: 1px solid;
     background-color: #ffaa72;
     overflow: hidden;
+    /* 모달을 위한 기준 생성 */
+    position: absolute;
+    top: 2rem;
 }
 body {
     font-family: Montserrat,sans-serif;
@@ -466,17 +469,14 @@ tbody td{
 
 .modal {
     position: absolute;
-    top: 43%;
-    width: 45%;
-    left: 13.5rem;
-    background-color: snow;
-    padding: 0.5rem;
+    top: 19rem;
+    width: 85%;
+    background: snow;
     box-shadow: 0px 10px 10px rgb(0 0 0 / 25%);
     z-index: 10;
     animation: modal-show .3s;
     border-radius: 14px;
     text-align: center;
-    
 }
 
 @keyframes modal-show {
@@ -566,7 +566,7 @@ tbody td{
     background-color: snow;
 }
 
-#coverBackground {
+/* #coverBackground {
     position: absolute;
     background-color: gray;
     height: 43.1rem;
@@ -576,4 +576,4 @@ tbody td{
     left: 12.4rem;
     animation: modal-bg-show .3s;
     z-index: 10;
-}
+} */

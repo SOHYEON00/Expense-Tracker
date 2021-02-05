@@ -27,38 +27,46 @@ function Category({ category }) {
         
     }
     return (
-      <tr>
-        <td>
-          <DeleteButton formType={CATEGORIES} itemId={category.id} />
-        </td>
-        <td>{category.type}</td>
-        <td>{category.category}</td>
-        <td>
-          <button onClick={onToggleHandler} className="deleteBtn">
-            <FontAwesomeIcon icon={faPencilAlt} />
-          </button>
-        </td>
-        {openModal && (
+      <>
+        <tr>
+          <td>
+            <DeleteButton formType={CATEGORIES} itemId={category.id} />
+          </td>
+          <td>{category.type}</td>
+          <td>{category.category}</td>
+          <td>
+            <button onClick={onToggleHandler} className="deleteBtn">
+              <FontAwesomeIcon icon={faPencilAlt} />
+            </button>
+          </td>
+        </tr>
+      
+          {openModal && (
             <Modal
               header="카테고리 수정"
               onToggleHandler={onToggleHandler}
               contents={
-                  <>
-                  <p>{`${category.type} - `} <span>{category.category}</span></p>
-                <form onSubmit={UpdateHandler}>
-                  <input
-                    type="text"
-                    value={newCategoryText}
-                    onChange={onTextHandler}
-                    className="input"
-                  />
-                  <button className="submitButtonIcon" ><FontAwesomeIcon icon={faArrowCircleRight} /></button>
-                </form>
+                <>
+                  <p>
+                    {`${category.type} - `} <span>{category.category}</span>
+                  </p>
+                  <form onSubmit={UpdateHandler}>
+                    <input
+                      type="text"
+                      value={newCategoryText}
+                      onChange={onTextHandler}
+                      className="input"
+                    />
+                    <button className="submitButtonIcon">
+                      <FontAwesomeIcon icon={faArrowCircleRight} />
+                    </button>
+                  </form>
                 </>
               }
             />
           )}
-      </tr>
+        
+      </>
     );
 }
 
