@@ -5,11 +5,12 @@ function Modal({header, contents, onToggleHandler}) {
     <>
       {/* <div id="coverBackground"></div> */}
       <div className="modal">
-        <div>
+        <div className="modalContents">
           <h4>{header}</h4>
           <button onClick={onToggleHandler}>X</button>
         </div>
-        {contents}
+        <div className="modalContents flexColumn">{contents}</div>
+        
       </div>
     </>
   );
