@@ -8,13 +8,15 @@ function CategoriesSection({ categories }) {
     return (
       <>
         <CategoryFactory />
-        <div>
-        <h3>카테고리 설정</h3>
+        <div className="listTable">
+        <h3>Category List</h3>
         <table>
           <thead>
             <tr>
+              <th>삭제</th>
               <th>TYPE</th>
-              <th>CATEGORY</th>
+              <th>CONTENTS</th>
+              <th>수정</th>
             </tr>
           </thead>
           <tbody>

@@ -420,3 +420,25 @@ label {
     top: -2.5rem;
     text-align: center;
 }
+
+.listTable {
+    height: 65%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    border-bottom: 1px solid #bbb;
+}
+
+thead th {
+    padding-bottom: 1rem;
+}
+
+tbody td{
+    padding: 0.4rem;
+}
