@@ -1,4 +1,5 @@
 import CategoriesSection from 'components/CategoriesSection'
+import SelectBgcolor from 'components/SelectBgcolor';
 import React from 'react'
 
 function Settings({categories}) {
@@ -6,6 +7,7 @@ function Settings({categories}) {
         <>
          <article id="settingSection">
              <CategoriesSection categories={categories}/>
+             <SelectBgcolor />
         </article>   
         </>
     )

@@ -19,7 +19,7 @@ function App() {
 
 
   return (
-    <main className="App">
+    <main className="App" >
     <AppRouter categories={categories}/>
     <Footer />
     </main>

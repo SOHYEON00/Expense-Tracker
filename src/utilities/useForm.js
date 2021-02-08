@@ -57,7 +57,7 @@ function useForm({ initialValues, onSubmit, validate}) {
         } 
         
         else if(values.formType === CATEGORIES){
-            console.log(values);
+
             const categoryObj = {
                 type: values.type,
                 category: values.category
