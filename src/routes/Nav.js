@@ -25,7 +25,7 @@ function Nav() {
       <Link to="/settings">
       &#10094;
       </Link>
-      <span>{title}</span>
+      <span id="navTitle">{title}</span>
       <Link to="/">
       &#10095;	
       </Link>

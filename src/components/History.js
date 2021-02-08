@@ -12,7 +12,7 @@ function History({ transactions }) {
 
     return (
       <article id="historyComponent">
-        <section id="historyList" className="list">
+        <section>
         <h3>History</h3>
         
           {copyTransactions &&

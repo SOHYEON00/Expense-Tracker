@@ -54,12 +54,12 @@ function Transaction({ transactionObj, isNewDate }) {
         <div className="buttonContainer">
           <DeleteButton formType={TRANSACTIONS} itemId={transactionObj.id} />
          
-          <button onClick={onToggleHandler} className="deleteBtn">
+          <button onClick={onToggleHandler} className="eventButton">
             <FontAwesomeIcon icon={faPencilAlt} />
           </button>
           </div>
      
-        <div className="textContainer">
+        <div className="transactionContents">
           <span className="text">
             {transactionObj.text}
             <span className="category">{transactionObj.category}</span>

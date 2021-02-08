@@ -4,6 +4,7 @@
     padding: 1rem;
     border: 1px solid;
     overflow: hidden;
+    background-color: #bbb;
     /* 모달을 위한 기준 생성 */
     position: absolute;
     top: 2rem;
@@ -15,3 +16,4 @@ body {
     justify-content: center;
     align-items: center;
 }
+

@@ -17,7 +17,7 @@ function DeleteButton({ formType, itemId }) {
         }
     }
     return (
-        <button className="deleteBtn" onClick={onDeleteClick}>X</button>
+        <button className="eventButton" onClick={onDeleteClick}>X</button>
     )
 }
 

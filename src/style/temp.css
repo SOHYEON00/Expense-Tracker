@@ -17,136 +17,11 @@
     display: block;
 }
 
-/* balance Componenet balance-income-expense */
-.balanceComponent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 100%;
-    height: 4rem;
-    padding-bottom: 1rem;
-    color: white;
-}
 
-.balanceComponent div {
-    display: flex;
-}
-
-.balanceComponent section {
-    text-align: right;
-    margin: 0 1rem;
-}
-
-.balance #money {
-    font-size: 27px;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -0.01rem;
-}
-
-.name{
-    font-size: 11px;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-}
-
-.each .money {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    
-}
-
- .income .money{
-    color: #10B452;
-}
-
- .expense .money{
-    color: #EA0A0A;
-}
 
 /* 1rem : 25px */
 
 /* history */
-#historyComponent {
-    height: 32rem; /*기존: 27rem*/
-    padding: 1.5rem;
-    background-color: white;
-    margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
-    overflow: auto;
-    border-radius: 5px;
-    transition: height 1s ease;
-    animation: modal-bg-show .3s;
-}
-
-#historyComponent.short{
-    height: 13rem;
-}
-
-#historyComponent h3 {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 1rem;
-    margin-top: 0;
-}
-
-#historyComponent .transactionContainer {
-    margin: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    font-weight: bold;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    height: 1rem;
-}
-
-#historyComponent .textContainer {
-    width: 100%; /* -> 75% */
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    background-color: white;
-}
-
-#historyComponent .date {
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.text{
-    font-size: 16px;
-}
-
-.category {
-    font-size: 10px;
-    margin-left: 0.2rem;
-    color: #8D8888;
-}
-
-.amount {
-    font-size: 16px;
-}
-
-/* history scroll design */
-#historyComponent::-webkit-scrollbar {
-    width: 5px;
-    background-color: #f7f7f7;
-}
-
-#historyComponent::-webkit-scrollbar-thumb  { /*막대*/
-    background-color: #f69c47;
-    border-radius: 10px;
-    background-clip: padding-box; /*thumb와 track 사이에 공간주고 싶어서 사용. 기존의 padding, margin은 적용되지 않음.*/
-}
-
-#historyComponent::-webkit-scrollbar-track  { /*여백*/
-    background-color:white;
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 5px white;
-}
 
 
 /* footer */
@@ -189,11 +64,6 @@ footer {
     margin: 0 0.5rem;
 }
 
- h3 {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 1rem;
-    margin-top: 0;
-}
 
 #newTransactionContainer form{
     display: flex;
@@ -284,9 +154,7 @@ footer {
     z-index: 1;
 }
  
-fieldset {
-    border: none;
-}
+
 
 .radios select {
     font-size: 12px;
@@ -310,51 +178,7 @@ fieldset {
     justify-content: center;
 }
 
-label {
-    width: 20%;
-    text-align: right;
-    margin-right: 1rem;
-    font-weight: bold;
-    font-size: 16px;
-    color: #595656;
-}
 
-.input {
-    color: #8D8888;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 0.3rem;
-    width: 9rem;
-    border: none;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-/* 삭제 버튼 */
-
-.buttonContainer { 
-    opacity: 0;
-    width: 0px;
-    margin-right: 0.5rem;
-}
-
-
-.transactionContainer:hover .buttonContainer{
-    display:flex;
-    width: 3rem;
-    opacity: 1;
-    transition: width 0.5s;
-    transition-timing-function: ease-in-out;
-}
-
-.deleteBtn {
-    cursor: pointer;
-    background-color: #FA4B4B;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
-    color: white;
-}
 
 
 /* settings */

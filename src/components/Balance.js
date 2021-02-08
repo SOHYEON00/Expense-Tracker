@@ -28,20 +28,20 @@ function Balance({ transactions }) {
 
   return (
     <article className="balanceComponent">
-      <section className="balance">
-        <p className="name">YOUR BALANCE</p>
+      <section className="balanceSection">
+        <p className="subTitle">YOUR BALANCE</p>
         <p id="money">{total}원</p>
       </section>
       <div>
-        <section className="each income">
-          <p className="name">INCOME</p>
-          <p id="moneyPlus" className="money plus">
+        <section className="balanceSection income ">
+          <p className="subTitle">INCOME</p>
+          <p className="money plus">
             +{income}원
           </p>
         </section>
-        <section className="each expense">
-          <p className="name">EXPENSE</p>
-          <p id="moneyMinus" className="money minus">
+        <section className="balanceSection expense">
+          <p className="subTitle">EXPENSE</p>
+          <p className="money minus">
             -{expense}원
           </p>
         </section>
