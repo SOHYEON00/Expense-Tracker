@@ -1,0 +1,19 @@
+nav {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+nav span {
+    margin: 0 1rem;
+}
+
+nav a:visited {
+    color: white;
+}
+nav a {
+    text-decoration: none;
+}

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import DeleteButton from "utilities/DeleteButton";
 import Modal from "utilities/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

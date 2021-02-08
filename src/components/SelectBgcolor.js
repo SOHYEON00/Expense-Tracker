@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 function SelectBgcolor() {
     const componentToHex = (c) => {
         const hex = (+c).toString(16); //이미 c가 string이라서 +붙여 int로 바꿔줌.
-        return hex.length == 1 ? "0" + hex : hex;
+        return hex.length === 1 ? "0" + hex : hex;
     };
 
     const rgbToHex = (r,g,b) => {

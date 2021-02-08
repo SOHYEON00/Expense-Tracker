@@ -6,6 +6,7 @@
     border-right: 8px solid #EA0A0A;
 }
 
+
 #newTransactionContainer {
     transition: transform 1s ease;
     display: none;
@@ -14,44 +15,6 @@
 #newTransactionContainer.show {
     transform: translateY(-50%);
     display: block;
-}
-#root {
-    width: 414px;
-    height: 896px;
-    padding: 1rem;
-    border: 1px solid;
-    overflow: hidden;
-    /* background-color: #ffaa72; */
-    /* 모달을 위한 기준 생성 */
-    position: absolute;
-    top: 2rem;
-}
-body {
-    font-family: Montserrat,sans-serif;
-    background: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* nav!!! home-settings */
-nav {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-nav span {
-    margin: 0 1rem;
-}
-
-nav a:visited {
-    color: white;
-}
-nav a {
-    text-decoration: none;
 }
 
 /* balance Componenet balance-income-expense */

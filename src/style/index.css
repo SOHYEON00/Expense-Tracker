@@ -1,0 +1,17 @@
+#root {
+    width: 414px;
+    height: 896px;
+    padding: 1rem;
+    border: 1px solid;
+    overflow: hidden;
+    /* 모달을 위한 기준 생성 */
+    position: absolute;
+    top: 2rem;
+}
+body {
+    font-family: Montserrat,sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
