@@ -1,5 +1,9 @@
+/* 1rem : 25px */
+
 @import url('./index.css');
 @import url('./nav.css');
 @import url('./balance.css');
 @import url('./history.css');
 @import url('./common.css');
+@import url('./newTransactionForm.css');
+@import url('./radio.css');

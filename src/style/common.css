@@ -1,4 +1,4 @@
-label {
+form label {  /* radio label 도 영향을 받아서 (물론 삭제하지만) 수정필요*/
     width: 20%;
     text-align: right;
     margin-right: 1rem;
@@ -9,7 +9,7 @@ label {
 
 h3 {
     border-bottom: 1px solid #bbb;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     margin-top: 0;
 }
 
@@ -36,3 +36,15 @@ fieldset {
     font-size: 15px;
     color: white;
 }
+
+.button {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #FF8616;
+    border-radius: 2px;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 0.5rem;
+}
+

@@ -23,7 +23,7 @@ function RadioComponent({values, changeHandler}) {
       <>  
         <div className="radios" >
           <div className="checked" ref={slideRef}></div>
-          <label htmlFor="typePlus" className="labels" onClick={slideMoveHandler}>+</label>
+          <label htmlFor="typePlus" className="radioLabels" onClick={slideMoveHandler}>+</label>
           <input
             type="radio"
             name="type"
@@ -32,7 +32,7 @@ function RadioComponent({values, changeHandler}) {
             value="수입"
             onChange={changeHandler}
           />
-          <label htmlFor="typeMinus" className="labels" onClick={slideMoveHandler}>-</label>
+          <label htmlFor="typeMinus" className="radioLabels" onClick={slideMoveHandler}>-</label>
           <input
             type="radio"
             name="type"

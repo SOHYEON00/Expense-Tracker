@@ -41,7 +41,7 @@ function Home() {
             Add new transaction
           </button>
         </section>
-        <article id="newTransactionContainer" className="">
+        <article id="newTransactionContainer">
           <TransactionFactory />
         </article>
       </>

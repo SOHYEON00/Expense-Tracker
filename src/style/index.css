@@ -1,7 +1,7 @@
 #root {
     width: 414px;
     height: 896px;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid;
     overflow: hidden;
     background-color: #bbb;
@@ -17,3 +17,12 @@ body {
     align-items: center;
 }
 
+/* footer */
+
+footer {
+    font-size: 6px;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

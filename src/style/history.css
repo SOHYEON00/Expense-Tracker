@@ -1,6 +1,6 @@
 #historyComponent {
     height: 32rem; /*기존: 27rem*/
-    padding: 1.5rem;
+    padding: 0.5rem;
     background-color: white;
     margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
     overflow: auto;
@@ -44,10 +44,7 @@
     height: 1rem;
 }
 
-.date {
-    font-size: 13px;
-    font-weight: bold;
-}
+
 
 /* transactionContents */
 
@@ -59,18 +56,10 @@
     background-color: white;
 }
 
-.text{
-    font-size: 16px;
-}
-
 .category {
     font-size: 10px;
     margin-left: 0.2rem;
     color: #8D8888;
-}
-
-.amount {
-    font-size: 16px;
 }
 
 
@@ -83,11 +72,9 @@
 }
 
 
-.transactionContainer:hover .buttonContainer{
-    display:flex;
-    width: 3rem;
-    opacity: 1;
-    transition: width 0.5s;
-    transition-timing-function: ease-in-out;
+/* FORM BUTTON */
+.addNewButton {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
 }
-
