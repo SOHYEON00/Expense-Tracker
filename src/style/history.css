@@ -18,7 +18,7 @@
 }
 
 #historyComponent::-webkit-scrollbar-thumb  { /*막대*/
-    background-color: #f69c47;
+    /* background-color: #f69c47; */
     border-radius: 10px;
     background-clip: padding-box; /*thumb와 track 사이에 공간주고 싶어서 사용. 기존의 padding, margin은 적용되지 않음.*/
 }

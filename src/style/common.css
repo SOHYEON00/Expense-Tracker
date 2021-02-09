@@ -42,18 +42,10 @@ fieldset {
     font-weight: bold;
     font-size: 15px;
     color: white;
-    background-color: #768117;
+    /* background-color: #768117; */
     border-radius: 2px;
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: 0.5rem;
 }
 
-
-.submitButtonIcon {
-    color: #768117;
-    border: none;
-    font-size: 1.5rem;
-    position: absolute;
-    background-color: snow;
-}

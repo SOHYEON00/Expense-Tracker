@@ -15,5 +15,6 @@ const firebaseConfig = {
 
   export const TRANSACTIONS = "transactions";
   export const CATEGORIES = "categories";
+  export const MAINCOLOR = "mainColor"
 
   export const dbService = firebase.firestore();

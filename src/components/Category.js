@@ -57,7 +57,7 @@ function Category({ category }) {
                       onChange={onTextHandler}
                       className="input"
                     />
-                    <button className="submitButtonIcon">
+                    <button className="modalSubmitButton">
                       <FontAwesomeIcon icon={faArrowCircleRight} />
                     </button>
                   </form>
