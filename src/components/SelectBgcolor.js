@@ -11,32 +11,32 @@ function SelectBgcolor() {
     }
     
     const root = document.querySelector('div#root');
-
+    console.log(root);
     //  bgColor.match(/\d+/g); => array with only [r, g, b]
-    const rgbArray = (root.style.getPropertyValue('background-color')).match(/\d+/g);
-    const currentBgColor = rgbToHex(rgbArray[0], rgbArray[1], rgbArray[2]); //hex version
+    // const rgbArray = (root.style.getPropertyValue('background-color')).match(/\d+/g);
+    // const currentBgColor = rgbToHex(rgbArray[0], rgbArray[1], rgbArray[2]); //hex version
 
-    const [bgColor, setBgColor] = useState(currentBgColor);
+    // const [bgColor, setBgColor] = useState(currentBgColor);
 
-    console.log(rgbArray);
-    console.log(currentBgColor);
-    
-    const changeColor = (e) => {
-        const {value} = e.target;
-        setBgColor(value);
-    }
+    // console.log(rgbArray);
+    // console.log(currentBgColor);
+
+    // const changeColor = (e) => {
+    //     const {value} = e.target;
+    //     setBgColor(value);
+    // }
                                                                                                                                                                                                                                                                   
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
-        root.style.setProperty('background-color', bgColor);
-    }
+    // const onSubmitHandler = (e) => {
+    //     e.preventDefault();
+    //     root.style.setProperty('background-color', bgColor);
+    // }
     return (
         <div>
             <h3>메인 컬러</h3>
-            <form onSubmit={onSubmitHandler}>
+            {/* <form onSubmit={onSubmitHandler}>
                 <input type="color" onChange={changeColor} value={bgColor}/>
                 <input type="submit" value="Apply" />
-            </form>
+            </form> */}
             
         </div>
     )

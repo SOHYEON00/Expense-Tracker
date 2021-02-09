@@ -7,7 +7,7 @@ function Settings({categories}) {
         <>
          <article id="settingSection">
              <CategoriesSection categories={categories}/>
-             {/* <SelectBgcolor /> */}
+             <SelectBgcolor />
         </article>   
         </>
     )

@@ -55,6 +55,7 @@ thead th {
 tbody td{
     padding: 0.4rem;
     font-weight: bold;
+    width: 5%;
 }
 
 
