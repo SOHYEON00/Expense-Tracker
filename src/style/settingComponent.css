@@ -10,17 +10,6 @@
 }
 
 
-
-#settingSection input[type="submit"] {
-    font-weight: bold;
-    font-size: 15px;
-    color: white;
-    background-color: #FF8616;
-    border-radius: 2px;
-    border: none;  
-}
-
-
 /* category form */
 .categoryForm p{
     margin: 0;

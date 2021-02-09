@@ -87,7 +87,7 @@ function TransactionFactory() {
           </p>
         </fieldset>
 
-        <input type="submit" value="Add transaction" disabled={isSubmit} />
+        <input type="submit" id="transactionSubmitBtn" className="button" value="Add transaction" disabled={isSubmit} />
       </form>
     </>
   );
