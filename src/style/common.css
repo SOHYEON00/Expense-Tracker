@@ -7,6 +7,10 @@ form label {  /* radio label 도 영향을 받아서 (물론 삭제하지만) �
     color: #595656;
 }
 
+article {
+    padding: 1rem;
+}
+
 h3 {
     border-bottom: 1px solid #bbb;
     padding: 1rem 0;

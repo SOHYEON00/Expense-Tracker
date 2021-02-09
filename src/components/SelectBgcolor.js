@@ -12,7 +12,7 @@ function SelectBgcolor() {
     
     const root = document.querySelector('div#root');
 
-     // bgColor.match(/\d+/g); => array with only [r, g, b]
+    //  bgColor.match(/\d+/g); => array with only [r, g, b]
     const rgbArray = (root.style.getPropertyValue('background-color')).match(/\d+/g);
     const currentBgColor = rgbToHex(rgbArray[0], rgbArray[1], rgbArray[2]); //hex version
 
@@ -21,12 +21,12 @@ function SelectBgcolor() {
 
     const changeColor = (e) => {
         const {value} = e.target;
-        setBgColor(value);
+        // setBgColor(value);
     }
                                                                                                                                                                                                                                                                   
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        root.style.setProperty('background-color', bgColor);
+        // root.style.setProperty('background-color', bgColor);
     }
     return (
         <div>

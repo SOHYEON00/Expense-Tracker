@@ -3,15 +3,6 @@
 
 /* settings */
 
-#settingSection {
-    height: 40rem;
-    padding: 1.5rem;
-    background-color: white;
-    margin: 0 -0.5rem;
-    border-radius: 5px;
-    animation: modal-bg-show .3s;
-}
-
 
 
 #settingSection input[type="submit"] {

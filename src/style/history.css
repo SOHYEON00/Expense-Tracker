@@ -1,6 +1,5 @@
 #historyComponent {
     height: 32rem; /*기존: 27rem*/
-    padding: 0.5rem;
     background-color: white;
     margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
     overflow: auto;
@@ -62,6 +61,13 @@
     color: #8D8888;
 }
 
+.transactionContainer:hover .buttonContainer{
+    display:flex;
+    width: 3rem;
+    opacity: 1;
+    transition: width 0.5s;
+    transition-timing-function: ease-in-out;
+}
 
 /* 삭제 버튼 */
 

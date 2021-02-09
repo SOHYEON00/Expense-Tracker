@@ -1,0 +1,21 @@
+#settingSection {
+    height: 40rem;
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 5px;
+    animation: modal-bg-show .3s;
+}
+
+
+
+#settingSection input[type="submit"] {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #FF8616;
+    border-radius: 2px;
+    border: none;  
+}
