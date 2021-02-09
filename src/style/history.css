@@ -15,7 +15,6 @@
 /* history scroll design */
 #historyComponent::-webkit-scrollbar {
     width: 5px;
-    background-color: #f7f7f7;
 }
 
 #historyComponent::-webkit-scrollbar-thumb  { /*막대*/
@@ -25,9 +24,9 @@
 }
 
 #historyComponent::-webkit-scrollbar-track  { /*여백*/
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: inset 0px 0px 5px white;
+    box-shadow: inset 0px 0px 5px;
 }
 
 /* transaction Container*/

@@ -1,9 +1,6 @@
 form label {  /* radio label 도 영향을 받아서 (물론 삭제하지만) 수정필요*/
-    width: 20%;
-    text-align: right;
     margin-right: 1rem;
     font-weight: bold;
-    font-size: 16px;
     color: #595656;
 }
 

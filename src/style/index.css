@@ -21,7 +21,5 @@ body {
 
 footer {
     font-size: 6px;
-    position: fixed;
-    top: 58rem;
-    left: 12rem;
+    text-align: center;
 }

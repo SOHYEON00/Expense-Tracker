@@ -18,15 +18,17 @@ function SelectBgcolor() {
 
     const [bgColor, setBgColor] = useState(currentBgColor);
 
-
+    console.log(rgbArray);
+    console.log(currentBgColor);
+    
     const changeColor = (e) => {
         const {value} = e.target;
-        // setBgColor(value);
+        setBgColor(value);
     }
                                                                                                                                                                                                                                                                   
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        // root.style.setProperty('background-color', bgColor);
+        root.style.setProperty('background-color', bgColor);
     }
     return (
         <div>
