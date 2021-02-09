@@ -11,7 +11,7 @@ function SelectBgcolor() {
         return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
     }
     
-    const root = document.querySelector('div#root');
+    const root = document.querySelector('main');
 
     //  bgColor.match(/\d+/g); => array with only [r, g, b]
     // getComputedStyle(root).getPropertyValue('background-color') => css에 작성되어있지 않아도 작동함.
@@ -23,6 +23,7 @@ function SelectBgcolor() {
 
     const saveColorOnDB = async() => {
         await dbService.doc(`${MAINCOLOR}/mainColor`).update({
+            mainColor: mainColor,
             bgColor: `${mainColor}77`,
             buttonColor: mainColor,
             scrollbarColor: mainColor,
