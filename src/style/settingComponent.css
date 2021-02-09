@@ -19,3 +19,58 @@
     border-radius: 2px;
     border: none;  
 }
+
+
+/* category form */
+.categoryForm p{
+    margin: 0;
+    position: relative;
+    top: -2.5rem;
+    text-align: center;
+}
+
+
+/* category list table */
+.listTable {
+    height: 65%;
+    overflow: auto;
+    width: 100%;
+    padding-right: 1.4rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    border-bottom: 1px solid #bbb;
+}
+
+thead th {
+    padding-bottom: 1rem;
+}
+
+tbody td{
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
+
+.listTable::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f7f7f7;
+}
+
+.listTable::-webkit-scrollbar-thumb  { /*막대*/
+    background-color: #f69c47;
+    border-radius: 10px;
+    background-clip: padding-box; /*thumb와 track 사이에 공간주고 싶어서 사용. 기존의 padding, margin은 적용되지 않음.*/
+}
+
+.listTable::-webkit-scrollbar-track  { /*여백*/
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}

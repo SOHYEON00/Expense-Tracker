@@ -52,3 +52,10 @@ fieldset {
     padding: 0.5rem;
 }
 
+.submitButtonIcon {
+    color: #f19b4b;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: snow;
+}
