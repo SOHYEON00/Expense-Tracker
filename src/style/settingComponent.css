@@ -1,12 +1,6 @@
 #settingSection {
-    height: 40rem;
-    background-color: white;
+    height: 41rem;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-    border-radius: 5px;
-    animation: modal-bg-show .3s;
 }
 
 
@@ -21,10 +15,10 @@
 
 /* category list table */
 .listTable {
-    height: 65%;
+    height: 59%;
     overflow: auto;
-    width: 100%;
-    padding-right: 1.4rem;
+    /* width: 100%; */
+    /* padding-right: 1.4rem; */
 }
 
 table {
@@ -63,4 +57,23 @@ tbody td{
     background-color:white;
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px white;
+}
+
+#selectColorContainer {
+    display: flex;
+    margin: 3rem 0;
+    align-items: center;
+}
+
+#selectColorContainer h4{
+    font-size: 19px;
+    margin: 0;
+}
+
+.selectColorForm {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
 }

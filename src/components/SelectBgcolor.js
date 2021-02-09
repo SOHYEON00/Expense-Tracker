@@ -41,11 +41,11 @@ function SelectBgcolor() {
         saveColorOnDB();
     }
     return (
-        <div>
-            <h3>메인 컬러</h3>
-            <form onSubmit={onSubmitHandler}>
+        <div id="selectColorContainer">
+            <h4>메인 컬러</h4>
+            <form onSubmit={onSubmitHandler} className="selectColorForm">
                 <input type="color" onChange={changeColor} value={mainColor}/>
-                <input type="submit" value="Apply" />
+                <input type="submit" className="button" value="Apply" />
             </form>
             
         </div>

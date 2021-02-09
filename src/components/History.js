@@ -11,7 +11,7 @@ function History({ transactions }) {
 
 
     return (
-      <article id="historyComponent">
+      <article id="historyComponent" className="mainContainer">
         <section>
         <h3>History</h3>
         

@@ -1,6 +1,6 @@
 .modal {
     position: absolute;
-    padding: 16rem 0;
+    padding: 18rem 0;
     top: 7.3rem;
     left: 0;
     width: 100%;
@@ -64,12 +64,15 @@
 }
 
 .modal div {
-    height: 45%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #bbb;
     padding: 1rem;
+}
+
+.modal h4 {
+    margin: 0;
 }
 
 .flexColumn {

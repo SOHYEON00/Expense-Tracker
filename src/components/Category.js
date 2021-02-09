@@ -4,7 +4,6 @@ import DeleteButton from 'utilities/DeleteButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from 'utilities/Modal';
-// import UpdateHandler from 'components/UpdateHandler';
 
 function Category({ category }) {
     const [newCategoryText, setNewCategoryText] = useState(category.category);

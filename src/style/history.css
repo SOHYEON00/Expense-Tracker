@@ -1,15 +1,11 @@
 #historyComponent {
-    height: 32rem; /*기존: 27rem*/
-    background-color: white;
-    margin: 0 -0.5rem; /*양 옆으로 다 하얀 배경으로 하려고*/
+    height: 33.5rem; /*기존: 27rem*/
     overflow: auto;
-    border-radius: 5px;
     transition: height 1s ease;
-    animation: modal-bg-show .3s;
 }
 
 #historyComponent.short{ /*when form comes up*/
-    height: 13rem;
+    height: 14rem;
 }
 
 /* history scroll design */
@@ -81,5 +77,5 @@
 .addNewButton {
     display: flex;
     justify-content: center;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }

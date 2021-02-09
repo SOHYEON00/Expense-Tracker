@@ -49,3 +49,10 @@ fieldset {
     padding: 0.5rem;
 }
 
+.mainContainer {
+    width: 93%;
+    background-color: white;
+    margin: 1rem -0.5rem;
+    border-radius: 5px;
+    animation: modal-bg-show .3s;
+}

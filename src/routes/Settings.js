@@ -5,7 +5,7 @@ import React from 'react'
 function Settings({categories}) {
     return (
         <>
-         <article id="settingSection">
+         <article id="settingSection" className="mainContainer">
              <CategoriesSection categories={categories}/>
              <SelectBgcolor />
         </article>   
