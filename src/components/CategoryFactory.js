@@ -4,7 +4,7 @@ import useForm from 'utilities/useForm';
 import validate from 'utilities/validate';
 import {CATEGORIES} from 'fBase';
 
-function CategoryFactory() {
+function CategoryFactory({btnStyle}) {
     const { values, changeHandler, submitHandler} = useForm({
         initialValues: {formType: CATEGORIES, type: "지출", category: ""},
         onSubmit: (values) => {},
@@ -19,7 +19,7 @@ function CategoryFactory() {
             <label htmlFor="category">Contents</label>
             <input type="text" className="input" name="category" required value={values.category} onChange={changeHandler} placeholder="Enter contents..."/>
           
-          <input type="submit" className="button" name="submit" value="+"/></p>
+          <input type="submit" className="button" name="submit" value="+" style={btnStyle}/></p>
         </form>
      
     );

@@ -7,7 +7,6 @@
 #historyComponent.short{ /*when form comes up*/
     height: 14rem;
     overflow: auto;
-    /* transition: height 1s ease; */
 }
 
 /* history scroll design */
