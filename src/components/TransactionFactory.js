@@ -4,7 +4,7 @@ import validate from 'utilities/validate';
 import RadioComponent from '../utilities/RadioComponent';
 import {TRANSACTIONS} from "fBase";
 
-function TransactionFactory({ btnStyle }) {
+function TransactionFactory() {
   const {
     values,
     errors,
@@ -89,7 +89,6 @@ function TransactionFactory({ btnStyle }) {
             className="button"
             value="Add transaction"
             disabled={isSubmit}
-            style={btnStyle}
           />
         </fieldset>
       </form>

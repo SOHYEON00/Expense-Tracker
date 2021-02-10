@@ -2,12 +2,12 @@ import React from 'react';
 import CategoryFactory from "components/CategoryFactory";
 import Category from 'components/Category';
 
-function CategoriesSection({ categories, btnStyle}) {
+function CategoriesSection({ categories}) {
 
   
     return (
       <>
-        <CategoryFactory btnStyle={btnStyle}/>
+        <CategoryFactory/>
         <div className="listTable">
         <h3>Category List</h3>
         <table>

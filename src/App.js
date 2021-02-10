@@ -29,13 +29,15 @@ function App() {
   }, [bgColor]);
 
   const styles = {
-    forButton: { backgroundColor: `${mainColor}`},
     forBg: {backgroundColor: bgColor}
   }
 
+  const allSubmitBtns = document.querySelectorAll('.button');
+  allSubmitBtns.forEach(e => e.style.setProperty('background-color', `${mainColor}`));
+
   return (
     <main className="App" style={styles.forBg}>
-    <AppRouter categories={categories} mainColor={mainColor} btnStyle={styles.forButton}/>
+    <AppRouter categories={categories} mainColor={mainColor} />
     <Footer />
     </main>
   );

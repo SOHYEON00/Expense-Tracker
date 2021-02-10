@@ -5,7 +5,7 @@ import Balance from 'components/Balance';
 import {dbService, TRANSACTIONS} from 'fBase';
 
 
-function Home({ btnStyle }) {
+function Home() {
     const [transactions, setTransactions] = useState([]);
     const refNewBtn = useRef();
 
@@ -37,12 +37,12 @@ function Home({ btnStyle }) {
         <Balance transactions={transactions} />
         <History transactions={transactions} />
         <section className="addNewButton">
-          <button className="button" onClick={showContainer} ref={refNewBtn} style={btnStyle}>
+          <button className="button" onClick={showContainer} ref={refNewBtn}>
             Add new transaction
           </button>
         </section>
         <article id="newTransactionContainer">
-          <TransactionFactory btnStyle={btnStyle}/>
+          <TransactionFactory/>
         </article>
       </>
     );
