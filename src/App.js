@@ -5,7 +5,7 @@ import Footer from 'components/Footer';
 
 function App() {
   const [categories, setCategories] = useState([]);
-  const [mainColor, setMainColor] = useState("#bbbbbb");
+  const [mainColor, setMainColor] = useState("");
 
   useEffect(() => {
     dbService.collection(CATEGORIES).onSnapshot((snapshot) => {
@@ -22,13 +22,13 @@ function App() {
         ...doc.data(),
         id: doc.mainColor,
       }));
-      setMainColor(dbColor[0].bgColor);
+      setMainColor(dbColor[0].mainColor);
     })
-  }, [])
+  }, []);
 
   return (
-    <main className="App" style={{backgroundColor: `${mainColor}`}}>
-    <AppRouter categories={categories}/>
+    <main className="App" style={{backgroundColor: `${mainColor}77`}}>
+    <AppRouter categories={categories} mainColor={mainColor}/>
     <Footer />
     </main>
   );

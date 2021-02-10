@@ -2,12 +2,14 @@ import CategoriesSection from 'components/CategoriesSection'
 import SelectBgcolor from 'components/SelectBgcolor';
 import React from 'react'
 
-function Settings({categories}) {
+function Settings({categories, mainColor}) {
+    console.log(categories);
+  console.log(mainColor);
     return (
         <>
          <article id="settingSection" className="mainContainer">
              <CategoriesSection categories={categories}/>
-             <SelectBgcolor />
+             <SelectBgcolor mainColor={mainColor}/>
         </article>   
         </>
     )

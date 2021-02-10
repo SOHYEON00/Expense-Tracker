@@ -1,51 +1,36 @@
 import { dbService, MAINCOLOR } from 'fBase';
 import React, {useState} from 'react'
 
-function SelectBgcolor() {
-    const componentToHex = (c) => {
-        const hex = (+c).toString(16); //이미 c가 string이라서 +붙여 int로 바꿔줌.
-        return hex.length === 1 ? "0" + hex : hex;
-    };
+function SelectBgcolor({ mainColor }) {
 
-    const rgbToHex = (r,g,b) => {
-        return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
-    }
-    
-    const root = document.querySelector('main');
-
-    //  bgColor.match(/\d+/g); => array with only [r, g, b]
-    // getComputedStyle(root).getPropertyValue('background-color') => css에 작성되어있지 않아도 작동함.
-
-    const rgbArray = (getComputedStyle(root).getPropertyValue('background-color')).match(/\d+/g);
-    const currentBgColor = rgbToHex(rgbArray[0], rgbArray[1], rgbArray[2]); //hex version
-
-    const [mainColor, setBgColor] = useState(currentBgColor);
-
+    const [newMainColor, setNewMainColor] = useState(`${mainColor}`);
+    // const [newBgColor, setNewBgColor] = useState(`${mainColor}77`);
+    console.log(newMainColor);
+    // console.log(newBgColor);
     const saveColorOnDB = async() => {
         await dbService.doc(`${MAINCOLOR}/mainColor`).update({
-            mainColor: mainColor,
-            bgColor: `${mainColor}77`,
-            buttonColor: mainColor,
-            scrollbarColor: mainColor,
+            mainColor: newMainColor,
+            bgColor: `${newMainColor}77`,
+            buttonColor: newMainColor,
+            scrollbarColor: newMainColor,
         });
     }
 
     const changeColor = (e) => {
         const {value} = e.target;
-        setBgColor(value);
+        // setNewBgColor(`${value}77`);
+        setNewMainColor(value);
     }
                                                                                                                                                                                                                                                                
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        root.style.setProperty('background-color', `${mainColor}77`);
-
         saveColorOnDB();
     }
     return (
         <div id="selectColorContainer">
             <h4>메인 컬러</h4>
             <form onSubmit={onSubmitHandler} className="selectColorForm">
-                <input type="color" onChange={changeColor} value={mainColor}/>
+                <input type="color" onChange={changeColor} value={newMainColor}/>
                 <input type="submit" className="button" value="Apply" />
             </form>
             
