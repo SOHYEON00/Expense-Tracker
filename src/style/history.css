@@ -1,11 +1,13 @@
 #historyComponent {
-    height: 33.5rem; /*기존: 27rem*/
+    height: 32rem;
     overflow: auto;
     transition: height 1s ease;
 }
 
 #historyComponent.short{ /*when form comes up*/
     height: 14rem;
+    overflow: auto;
+    /* transition: height 1s ease; */
 }
 
 /* history scroll design */
@@ -58,7 +60,7 @@
 
 .transactionContainer:hover .buttonContainer{
     display:flex;
-    width: 3rem;
+    width: 4rem;
     opacity: 1;
     transition: width 0.5s;
     transition-timing-function: ease-in-out;

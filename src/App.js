@@ -17,7 +17,7 @@ function App() {
       }));
       setCategories(categoryArray);
     });
-  console.log(bgColor);
+
     dbService.collection(MAINCOLOR).onSnapshot((snapshot) => {
       const dbColor = snapshot.docs.map((doc) => ({
         ...doc.data(),
@@ -26,11 +26,16 @@ function App() {
       setMainColor(dbColor[0].mainColor);
       setBgColor(dbColor[0].bgColor);
     })
-  }, []);
+  }, [bgColor]);
+
+  const styles = {
+    forButton: { backgroundColor: `${mainColor}`},
+    forBg: {backgroundColor: bgColor}
+  }
 
   return (
-    <main className="App" style={{backgroundColor: `${bgColor}`}}>
-    <AppRouter categories={categories} mainColor={mainColor}/>
+    <main className="App" style={styles.forBg}>
+    <AppRouter categories={categories} mainColor={mainColor} btnStyle={styles.forButton}/>
     <Footer />
     </main>
   );

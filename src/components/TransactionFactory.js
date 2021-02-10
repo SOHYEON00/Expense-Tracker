@@ -4,7 +4,7 @@ import validate from 'utilities/validate';
 import RadioComponent from '../utilities/RadioComponent';
 import {TRANSACTIONS} from "fBase";
 
-function TransactionFactory() {
+function TransactionFactory({ btnStyle }) {
   const {
     values,
     errors,
@@ -25,27 +25,25 @@ function TransactionFactory() {
     validate,
   });
 
-
   return (
     <>
       <form onSubmit={submitHandler}>
-          <h3>Add New Transaction</h3>
-          <RadioComponent
-              values={values}
-              changeHandler={changeHandler}
-            />
-          <fieldset className="formFieldset">
-            <select name="category" onChange={changeHandler}>
-          <option>카테고리를 선택해주세요.</option>
-          {categories &&
-            categories.filter(e => e.type === values.type).map((e) => {
-              return (
-                <option key={e.id} value={e.category}>
-                  {e.category}
-                </option>
-              );
-            })}
-        </select>
+        <h3>Add New Transaction</h3>
+        <RadioComponent values={values} changeHandler={changeHandler} />
+        <fieldset className="formFieldset">
+          <select name="category" onChange={changeHandler}>
+            <option>카테고리를 선택해주세요.</option>
+            {categories &&
+              categories
+                .filter((e) => e.type === values.type)
+                .map((e) => {
+                  return (
+                    <option key={e.id} value={e.category}>
+                      {e.category}
+                    </option>
+                  );
+                })}
+          </select>
 
           <p>
             <label htmlFor="date">Date</label>
@@ -85,9 +83,15 @@ function TransactionFactory() {
               className="input"
             />
           </p>
+          <input
+            type="submit"
+            id="transactionSubmitBtn"
+            className="button"
+            value="Add transaction"
+            disabled={isSubmit}
+            style={btnStyle}
+          />
         </fieldset>
-
-        <input type="submit" id="transactionSubmitBtn" className="button" value="Add transaction" disabled={isSubmit} />
       </form>
     </>
   );

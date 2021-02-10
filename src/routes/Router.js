@@ -4,17 +4,17 @@ import Settings from "routes/Settings";
 import Home from "routes/Home";
 import Nav from './Nav';
 
-function AppRouter({ categories, mainColor }) {
+function AppRouter({ categories, mainColor, btnStyle }) {
 
   return (
     <Router>
       <Nav />
       <Switch>
         <Route exact path="/settings" >
-          <Settings categories={categories} mainColor={mainColor}/>
+          <Settings categories={categories} mainColor={mainColor} btnStyle={btnStyle}/>
         </Route>
         <Route exact path="/" >
-          <Home categories={categories} mainColor={mainColor}/>
+          <Home categories={categories} btnStyle={btnStyle}/>
         </Route>
       </Switch>
     </Router>
