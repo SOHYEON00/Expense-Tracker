@@ -17,7 +17,7 @@ function Home({mainColor}) {
         const container = document.getElementById('newTransactionContainer');
         container.classList.toggle('show');
   
-        refNewBtn.current.innerText = 
+        refNewBtn.current.value = 
           (container.classList.contains('show')) ? 
           'Cancel' :
           'Add new transaction';
@@ -39,7 +39,7 @@ function Home({mainColor}) {
         <Balance transactions={transactions} />
         <History transactions={transactions} />
         <section className="addNewButton">
-          <SubmitBtn type="button" className="button" onClick={showContainer} ref={refNewBtn} value="Add new transaction">
+          <SubmitBtn type="button" className="button" onClick={showContainer} ref={refNewBtn} value='Add new transaction'>
           </SubmitBtn>
         </section>
         <article id="newTransactionContainer">
