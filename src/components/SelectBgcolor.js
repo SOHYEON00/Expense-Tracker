@@ -1,8 +1,9 @@
 import { dbService, MAINCOLOR } from 'fBase';
 import React, {useState} from 'react'
 
-function SelectBgcolor({ mainColor, SubmitBtn }) {
-    const [newMainColor, setNewMainColor] = useState(`${mainColor}`);
+function SelectBgcolor({ SubmitBtn }) {
+    const currentMainColor = SubmitBtn.componentStyle.rules[1];
+    const [newMainColor, setNewMainColor] = useState(`${currentMainColor}`);
 
     const saveColorOnDB = async() => {
         await dbService.doc(`${MAINCOLOR}/mainColor`).update({

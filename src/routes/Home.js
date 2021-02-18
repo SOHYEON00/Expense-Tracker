@@ -3,13 +3,11 @@ import TransactionFactory from 'components/TransactionFactory';
 import History from 'components/History';
 import Balance from 'components/Balance';
 import {dbService, TRANSACTIONS} from 'fBase';
-import {changeBtnColor} from 'utilities/changeBtnColor';
 
 
-function Home({mainColor}) {
+function Home({SubmitBtn}) {
     const [transactions, setTransactions] = useState([]);
     const refNewBtn = useRef();
-    const {SubmitBtn} = changeBtnColor({ mainColor });
 
     const showContainer = () => {
         const historyContainer = document.getElementById('historyComponent');
