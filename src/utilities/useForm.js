@@ -73,7 +73,7 @@ function useForm({ initialValues, onSubmit, validate}) {
             onSubmit(values);
         } 
         setIsSubmit(false);
-    }, [isSubmit, values, onSubmit]);
+    }, []);
 
     return {
         values,

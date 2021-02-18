@@ -6,8 +6,6 @@ import React, {useState} from 'react';
 function UpdateButton({ formType, itemId, text }) {
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(text);
-    let isTransaction = false;
-    let isCategory = false;
 
     const onToggleHandler = () => {
         setIsEditing(prev => !prev);

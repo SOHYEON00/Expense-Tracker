@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 
 function SelectBgcolor({ mainColor }) {
     const [newMainColor, setNewMainColor] = useState(mainColor);
+    
     const saveColorOnDB = async() => {
         await dbService.doc(`${MAINCOLOR}/mainColor`).update({
             mainColor: newMainColor,

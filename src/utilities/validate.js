@@ -1,4 +1,4 @@
-export default function validate({ type, date, text, amount}){
+export default function validate({ date, amount}){
     const errors = {};
 
     if(!date){
