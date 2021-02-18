@@ -1,9 +1,10 @@
 import { dbService, MAINCOLOR } from 'fBase';
 import React, {useState} from 'react'
 
-function SelectBgcolor({ mainColor }) {
-    const [newMainColor, setNewMainColor] = useState(mainColor);
-    
+function SelectBgcolor({ mainColor, SubmitBtn }) {
+    const [newMainColor, setNewMainColor] = useState(`${mainColor}`);
+    console.log(mainColor);
+
     const saveColorOnDB = async() => {
         await dbService.doc(`${MAINCOLOR}/mainColor`).update({
             mainColor: newMainColor,
@@ -23,15 +24,14 @@ function SelectBgcolor({ mainColor }) {
         saveColorOnDB();
     }
     return (
-        <div id="selectColorContainer">
-            <h4>메인 컬러</h4>
-            <form onSubmit={onSubmitHandler} className="selectColorForm">
-                <input type="color" onChange={changeColor} value={newMainColor}/>
-                <input type="submit" className="button" value="Apply"/>
-            </form>
-            
-        </div>
-    )
+      <div id="selectColorContainer">
+        <h4>메인 컬러</h4>
+        <form onSubmit={onSubmitHandler} className="selectColorForm">
+          <input type="color" onChange={changeColor} value={newMainColor} />
+          <SubmitBtn type="submit" className="button" value="Apply"></SubmitBtn>
+        </form>
+      </div>
+    );
 }
 
 export default SelectBgcolor

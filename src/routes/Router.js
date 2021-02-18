@@ -14,7 +14,7 @@ function AppRouter({ categories, mainColor }) {
           <Settings categories={categories} mainColor={mainColor}/>
         </Route>
         <Route exact path="/" >
-          <Home categories={categories}/>
+          <Home categories={categories} mainColor={mainColor} />
         </Route>
       </Switch>
     </Router>
