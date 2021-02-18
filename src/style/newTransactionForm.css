@@ -6,7 +6,7 @@
 
 #newTransactionContainer.show {
     visibility: visible;
-    height: 38vh;
+    height: 38rem;
     width: 92%;
     background-color: white;
     border-radius: 15px;
