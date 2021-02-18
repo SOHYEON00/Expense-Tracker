@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Expense-Tracker/static/css/main.c9450a64.chunk.css",
-    "main.js": "/Expense-Tracker/static/js/main.e0f28fc6.chunk.js",
-    "main.js.map": "/Expense-Tracker/static/js/main.e0f28fc6.chunk.js.map",
+    "main.css": "/Expense-Tracker/static/css/main.1acac68c.chunk.css",
+    "main.js": "/Expense-Tracker/static/js/main.bb1af93e.chunk.js",
+    "main.js.map": "/Expense-Tracker/static/js/main.bb1af93e.chunk.js.map",
     "runtime-main.js": "/Expense-Tracker/static/js/runtime-main.d313ec78.js",
     "runtime-main.js.map": "/Expense-Tracker/static/js/runtime-main.d313ec78.js.map",
-    "static/js/2.00fbbccc.chunk.js": "/Expense-Tracker/static/js/2.00fbbccc.chunk.js",
-    "static/js/2.00fbbccc.chunk.js.map": "/Expense-Tracker/static/js/2.00fbbccc.chunk.js.map",
+    "static/js/2.361d5968.chunk.js": "/Expense-Tracker/static/js/2.361d5968.chunk.js",
+    "static/js/2.361d5968.chunk.js.map": "/Expense-Tracker/static/js/2.361d5968.chunk.js.map",
     "index.html": "/Expense-Tracker/index.html",
-    "static/css/main.c9450a64.chunk.css.map": "/Expense-Tracker/static/css/main.c9450a64.chunk.css.map",
-    "static/js/2.00fbbccc.chunk.js.LICENSE.txt": "/Expense-Tracker/static/js/2.00fbbccc.chunk.js.LICENSE.txt"
+    "static/css/main.1acac68c.chunk.css.map": "/Expense-Tracker/static/css/main.1acac68c.chunk.css.map",
+    "static/js/2.361d5968.chunk.js.LICENSE.txt": "/Expense-Tracker/static/js/2.361d5968.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d313ec78.js",
-    "static/js/2.00fbbccc.chunk.js",
-    "static/css/main.c9450a64.chunk.css",
-    "static/js/main.e0f28fc6.chunk.js"
+    "static/js/2.361d5968.chunk.js",
+    "static/css/main.1acac68c.chunk.css",
+    "static/js/main.bb1af93e.chunk.js"
   ]
 }
