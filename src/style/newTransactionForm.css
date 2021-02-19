@@ -31,4 +31,5 @@
 
 .formFieldset select {
     width: 55%;
+    padding: 0.2rem;
 }
