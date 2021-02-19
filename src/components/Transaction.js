@@ -13,7 +13,6 @@ function Transaction({ transactionObj, isNewDate }) {
   const [newText, setNewText] = useState(transactionObj.text);
   const [openModal, setOpenModal] = useState(false);
   const type = transactionObj.type;
-  // const refBtns = useRef();
 
   const onToggleHandler = () => {
     setOpenModal((prev) => !prev);
