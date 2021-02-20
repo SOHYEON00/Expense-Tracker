@@ -11,11 +11,12 @@
 
 /* history scroll design */
 #historyComponent::-webkit-scrollbar {
+    background-color: white;
     width: 5px;
 }
 
 #historyComponent::-webkit-scrollbar-thumb  { /*막대*/
-    /* background-color: #f69c47; */
+    background-color: white;
     border-radius: 10px;
     background-clip: padding-box; /*thumb와 track 사이에 공간주고 싶어서 사용. 기존의 padding, margin은 적용되지 않음.*/
 }
@@ -23,7 +24,7 @@
 #historyComponent::-webkit-scrollbar-track  { /*여백*/
     background-color: white;
     border-radius: 10px;
-    box-shadow: inset 0px 0px 5px;
+    box-shadow: inset 0px 0px 5px white;
 }
 
 /* transaction Container*/
