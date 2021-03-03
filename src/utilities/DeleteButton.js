@@ -8,7 +8,6 @@ function DeleteButton({ formType, itemId }) {
         if(yes){
             //이미 formType이 fBase에서 가져온 것이므로 if-else if문 삭제함 -> 잘 작동함.
             await dbService.doc(`${formType}/${itemId}`).delete();
-            
         }
     }
     return (

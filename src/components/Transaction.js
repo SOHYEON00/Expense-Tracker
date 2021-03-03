@@ -11,7 +11,7 @@ function Transaction({ transactionObj, isNewDate }) {
   const [openModal, setOpenModal] = useState(false);
   const type = transactionObj.type;
 
-  // open <-> close modal
+  // open <-> close
   const onToggleHandler = () => {
     setOpenModal((prev) => !prev);
   };

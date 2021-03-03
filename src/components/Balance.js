@@ -16,12 +16,12 @@ function Balance({ transactions }) {
 
   const income = numToString(copyTransactions
     .filter((e) => e.type === "수입") //filter by type
-    // .map((e) => parseInt(e.amount)) // return only amount which is changed string to int -> they're alreay Number
+    .map((e) => parseInt(e.amount)) // return only amount which is changed string to int 
     .reduce((acc, cur) => (acc += cur), 0)); //get total
 
   const expense = numToString(copyTransactions
     .filter((e) => e.type === "지출")
-    // .map((e) => parseInt(e.amount))
+    .map((e) => parseInt(e.amount))
     .reduce((acc, cur) => (acc += cur), 0));
 
     
