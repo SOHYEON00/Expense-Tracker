@@ -1,13 +1,12 @@
 import React from 'react'
 
-function Modal({header, contents, onToggleHandler}) {
+function Modal({header, contents, onModalHandler}) {
   return (
     <>
-      {/* <div id="coverBackground"></div> */}
       <div className="modal">
         <div className="modalContents">
           <h4>{header}</h4>
-          <button onClick={onToggleHandler}>X</button>
+          <button onClick={onModalHandler}>X</button>
         </div>
         <div className="modalContents flexColumn">{contents}</div>
         

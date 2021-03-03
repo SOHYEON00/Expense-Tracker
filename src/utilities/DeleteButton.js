@@ -1,18 +1,13 @@
-import { TRANSACTIONS, dbService, CATEGORIES } from 'fBase';
+import { dbService } from 'fBase';
 import React from 'react';
 
 function DeleteButton({ formType, itemId }) {
     const onDeleteClick = async() => {
         const yes = window.confirm("내역을 삭제하시겠습니까?");
-
+        //try-catch 문으로 바꾸기
         if(yes){
-
-            if(formType === TRANSACTIONS){
-                await dbService.doc(`${TRANSACTIONS}/${itemId}`).delete();
-            }
-            else if(formType === CATEGORIES){
-                await dbService.doc(`${CATEGORIES}/${itemId}`).delete();
-            }
+            //이미 formType이 fBase에서 가져온 것이므로 if-else if문 삭제함 -> 잘 작동함.
+            await dbService.doc(`${formType}/${itemId}`).delete();
             
         }
     }

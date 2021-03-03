@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 
-function RadioComponent({values, changeHandler}) {
+function RadioComponent({changeHandler}) {
 
     const slideRef = useRef();
 

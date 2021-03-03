@@ -11,17 +11,17 @@ function Balance({ transactions }) {
                           else if(e.type === '지출') { returnedAmount = -e.amount}
                           return returnedAmount
                       }) // return amount with +/- set by type
-                      .reduce((acc, cur) => (acc += cur), 0)); //get total
+                      .reduce((acc, cur) => (acc += cur), 0)); //caculate total
   
 
   const income = numToString(copyTransactions
     .filter((e) => e.type === "수입") //filter by type
-    .map((e) => parseInt(e.amount)) // return only amount which is changed string to int
+    // .map((e) => parseInt(e.amount)) // return only amount which is changed string to int -> they're alreay Number
     .reduce((acc, cur) => (acc += cur), 0)); //get total
 
   const expense = numToString(copyTransactions
     .filter((e) => e.type === "지출")
-    .map((e) => parseInt(e.amount))
+    // .map((e) => parseInt(e.amount))
     .reduce((acc, cur) => (acc += cur), 0));
 
     
@@ -34,7 +34,7 @@ function Balance({ transactions }) {
       </section>
       <div>
         <section className="balanceSection income ">
-          <p className="subTitle">INCOME</p>
+          <p className="subTitle">INCOME</p>    
           <p className="money plus">
             +{income}원
           </p>

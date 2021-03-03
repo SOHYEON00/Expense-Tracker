@@ -13,7 +13,7 @@ function CategoryFactory({ SubmitBtn }) {
     return (
       <form onSubmit={submitHandler} className="categoryForm">
         <h3>New Category</h3>
-        <RadioComponent values={values} changeHandler={changeHandler} />
+        <RadioComponent changeHandler={changeHandler} />
         <p>
           <label htmlFor="category">Contents</label>
           <input

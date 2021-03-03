@@ -18,14 +18,16 @@ function History({ transactions }) {
           {copyTransactions &&
             copyTransactions.map((transaction, idx) => {
               let isNewDate = true;
-              if (idx === 0) {
-                //맨 최근 거래내역 날짜 추가 위한 조건문
-                isNewDate = true;
-              } else if (idx > 0 && idx < copyTransactions.length - 1) {
+              // if (idx === 0) {
+              //   //맨 최근 거래내역 날짜 추가 위한 조건문
+              //   isNewDate = true;
+              // } else  -> 이미 위에서 true라고 선언해 줬는데 굳이..? 잘 작동함.
+
+              if (idx > 0 && idx < copyTransactions.length - 1) { //거래 index가 처음과 마지막이 아닌 경우
                 if (transaction.date !== copyTransactions[idx - 1].date) {
-                  isNewDate = true;
+                  isNewDate = true; //날짜 출력 o
                 } else {
-                  isNewDate = false;
+                  isNewDate = false; //날짜 출력 x
                 }
               }
               return (

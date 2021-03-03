@@ -9,7 +9,8 @@ function Category({ category }) {
     const [newCategoryText, setNewCategoryText] = useState(category.category);
     const [openModal, setOpenModal] = useState(false);
 
-    const onToggleHandler = () => {
+    //open <-> close modal
+    const onModalHandler = () => { 
         setOpenModal(prev => !prev);
     };
 
@@ -19,7 +20,7 @@ function Category({ category }) {
 
     const UpdateHandler = async(e) => {
         e.preventDefault();
-        setOpenModal(false);
+        onModalHandler();
         await dbService.doc(`${CATEGORIES}/${category.id}`).update({
             category: newCategoryText,
         });
@@ -34,7 +35,7 @@ function Category({ category }) {
           <td>{category.type}</td>
           <td>{category.category}</td>
           <td>
-            <button onClick={onToggleHandler} className="deleteBtn">
+            <button onClick={onModalHandler} className="deleteBtn">
               <FontAwesomeIcon icon={faPencilAlt} />
             </button>
           </td>
@@ -43,7 +44,7 @@ function Category({ category }) {
           {openModal && (
             <Modal
               header="카테고리 수정"
-              onToggleHandler={onToggleHandler}
+              onModalHandler={onModalHandler}
               contents={
                 <>
                   <p>

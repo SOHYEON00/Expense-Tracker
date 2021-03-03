@@ -29,7 +29,7 @@ function TransactionFactory({ SubmitBtn }) {
     <>
       <form onSubmit={submitHandler}>
         <h3>Add New Transaction</h3>
-        <RadioComponent values={values} changeHandler={changeHandler} />
+        <RadioComponent changeHandler={changeHandler} />
         <fieldset className="formFieldset">
           <select name="category" onChange={changeHandler}>
             <option>카테고리를 선택해주세요.</option>

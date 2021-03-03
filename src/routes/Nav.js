@@ -3,7 +3,6 @@ import {Link, useLocation} from 'react-router-dom';
 
 function Nav() {
  
-
   const location = useLocation();
   let title = "";
 
